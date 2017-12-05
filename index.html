@@ -1,6 +1,9 @@
 
 <!doctype html>
-<meta name=viewport content="width=device-width, initial-scale=1">
+
+  <meta name=viewport content="width=device-width, initial-scale=1">
+<meta name="description" content="The search engine that is cooler than Google. It gets you the best results, faster. You can get the app at oogleapp.gq If you are a filmaker you can use this to search the web in your movies without giving me any credit at all. Enjoy!">
+<meta name="keywords" content="Oogle,Alternate,Search,engine,fast,cool,spoof,google,bing,duckduckgo,aol,yahoo,netfind">    
 <link rel="manifest" href="manifest.json">
 <link rel="shortcut icon" href="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/C--fakepath-favicon.png">
 <html itemscope="" itemtype="http://schema.org/WebPage" lang="en-CA" id='html'><head><section id="image"><a href="newerhome"><meta content="https://github.com/tebahpla/tebahpla.github.io/blob/master/alternite_logos/bounceoogle.png?raw=true" itemprop="image" draggable="true">
@@ -9,9 +12,55 @@
 <style>
   
   .speech  { width: 40px; border: none; cursor: pointer;}
-  #transcript{ display: none}
+ 
   #speaknow { text-align: center; cursor: progress;}
+
+html{
+background-repeat: no-repeat;
+  background-position: right;
+}
+	
 </style>
+	<datalist id="autocomplete">
+  
+		<option value="HTML">
+		<option value="CSS">
+		<option value="JavaScript">
+		<option value="Java">
+		<option value="Ruby">
+		<option value="PHP">
+		<option value="Go"> 
+		<option value="Erlang"> 
+		<option value="Python">
+		<option value="C">
+		<option value="C#">
+		<option value="C++">
+		<option value="I like trains">
+		<option value="breathing exersise">
+		<option value="Oogle">
+		<option value="bing">
+		<option value="google">
+		<option value="flip a coin">
+		<option value="Im feeling yucky">	
+		<option value="ASDF">	
+		<option value="Annoying Orange">
+		<option value="I'm a flying giraffe from the moon">
+		<option value="speed test">
+		<option value="does Dumbledore have a horcrux?">
+		<option value="The Big Fat Cow That Goes Kapow">	
+		<option value="The Cat On The Mat Is Flat">	
+		<option value="BLEEEEEEEEAAAAHHHHCHH!!">	
+		<option value="poo4u.com">	
+		<option value="drive">
+		<option value="TUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUURRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRDDDDDDDDDDDDDDDDDDDDDDD!!!!!!!!!!!!">
+		<option value="poopoo">	
+		<option value="stuff">		
+		<option value="YouPooped">	
+		<option value="dynomite">
+		<option value="WikiHow">
+		<option value="Popo = police">	
+		<option value="InstantFart">		
+</datalist>
 <meta name="google-signin-client_id" content="273615037515-ebr6473ifcvjvs306tt9hq4ekt1d0q9l.apps.googleusercontent.com"><script>
   (function() {
     var cx = '006871109958894476408:m3adoijc7za';
@@ -24,10 +73,9 @@
   })();
 </script>
 
-  <link rel='stylesheet' href='https://tebahpla.github.io/speech-recognition/speachreck.css'>
 <script>
   
-   function submitit() { setTimeout(function(){ document.getElementById("myForm").submit(); }, 1000); }
+  function submitit() { setTimeout(function(){ document.getElementById("myForm").submit(); }, 1000); }
   function startDictation() {
 
     if (window.hasOwnProperty('webkitSpeechRecognition')) {
@@ -57,19 +105,74 @@
 
     }
   }
-</script>
-  <script>
+	
+
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPod/i);
+    },
     
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
+  } ;
+  if (isMobile.any()){
+  window.location='https://tebahpla.github.io/oogleformobile'
+  }
    
-    if(window.location == 'https://tebahpla.github.io/oogle?q=flip+a+coin'){
-      document.getElementById('coinflip').innerHTML="<iframe src='https://tebahpla.github.io/coinflip.html' height='350' width='99%'></iframe>";
-    };
-    if(window.location.includes('askew')){
-      window.location='https://tebahpla.github.io/tests/askew#gsc.tab=0&gsc.q=askew&gsc.sort='
+
+    function checkForFlip() {
+	 var x = document.getElementById("myForm");
+    var text = "";
+    var i;
+    for (i = 0; i < x.length ;i++) {
+        text += x.elements[i].value;
     }
+    if(text == 'flip a coi' || text == 'flip a coin'){
+   window.location='https://tebahpla.github.io/coinflip.html';
+   };
+	    if(text == 'googl' || text == 'google'){
+   window.location='https://www.google.com/search?newwindow=1&source=hp&q=google&oq=google&gs_l=psy-ab.3..0i131k1l4.1310.2649.0.2970.7.6.0.0.0.0.244.796.2j3j1.6.0....0...1.1.64.psy-ab..1.6.795.0..0i3k1.0.OBlHY3FyQ48&safe=active&ssui=on';
+   };
+  if(text == 'bin' || text == 'bing'){
+   window.location='https://www.bing.com/search?q=bing&qs=n&form=QBLH&sp=-1&pq=bing&sc=8-4&sk=&cvid=5B966C8C7C46449FA831CE3CE5B73E9E&adlt=strict';
+   };
+if(text == 'calculato' || text == 'calculator'){
+   window.location='https://tebahpla.github.io/calc';
+   };
+if(text == 'breathing exercis' || text == 'breathing exersise'){
+   window.location='https://tebahpla.github.io/breathing_exercise';
+   };
+if(text == 'speed tes' || text == 'speed test'){
+   window.location='http://speedtest.fdossena.com/';
+   };
+	if(text == 'does Dumbledore have a horcrux?' || text == 'does Dumbledore have a horcrux' || text == 'does dumbledore have a horcrux?' || text == 'does dumbledore have a horcrux'){
+   window.location='https://www.youtube.com/watch?v=do20JDmfFQw';
+   };
+	    if(text == 'drive' || text == 'driv' || text == 'Drive' || text == 'Driv'){
+   window.location='drive';
+   };
+	    if(text == 'askew' || text == 'askew' || text == 'Askew' || text == 'Askew'){
+   window.location='https://tebahpla.github.io/tests/askew#gsc.tab=0&gsc.q=askew&gsc.sort=';
+   };
+
+ 
+
+}
   </script>
   <script>
-    var n = Date().includes("Thu Sep 21");
+   var n = Date().includes("Thu Sep 21");
     var m = Date().includes("Wed Jul 05");
     var o = Date().includes("Fri Jun 02");
     var baktoskool = Date().includes("Sep 07");
@@ -189,27 +292,120 @@ function signOut() {
       document.getElementById('sss').innerHTML='';
     });
   }
-
 </script>
-  <div id='coinflip'></div><br><gcse:search linkTarget="_blank" resultSetSize="large" imageSearchResultSetSize="large"	><b><img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/Ooglething.jpg?raw=true" alt="Ooglething.jpg"/><br>Loading....</b><br><br><br><br></gcse:search> <br>
- 
-
-  <br> <form  id='myForm' action="search">
+                     <img onclick="startDictation();" class='speech' src="mic.svg" width='37' height='37' />  <br><div align='center'><form  id='myForm' action="search">
   
-    <input type="text" name="q" id="transcript" placeholder="Speak" />
+    <input type="search" title="Search The Web" id="transcript" list='autocomplete' onkeydown="checkForFlip()" oninput="setTimeout(function(){ checkForFlip() }, 1000)"  placeholder="Search The Web" name="q" autocomplete="on" value required>
    
   
-  </form>  <img onclick="startDictation()" class='speech' src="mic.svg" width='37' height='37' /> <br><h2 id='speaknow'></h2> <br><h1 id="🖕🖕🖕🖕🖕" class="support" title="🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕">🖕🖕🖕🖕🖕 <br> YOU WOULD GET IT IF YOU WENT TO BILLINGS!</h1>                              
+  </form></div> <br>
+ <style class="cp-pen-styles">
+button {
+  display: block;
+  padding: 0;
+  appearance: none;
+  overflow: hidden;
+  
+  border: #DCDCDC 1px solid;
+  background-color: #F2F2F2;
+  background-image: -webkit-linear-gradient(top, #F5F5F5, #F1F1F1);
+  background-image: -moz-linear-gradient(top, #F5F5F5, #F1F1F1);
+  border-radius: 2px;
+   
+    border: 1px solid #f2f2f2;
+    color: #757575;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    
+   
+    height:45px;
+}
+button:hover {
+  border-color: #cfcfcf;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px;
+  background-image: -webkit-linear-gradient(top, #f8f8f8, #F1F1F1);
+  background-image: -moz-linear-gradient(top, #f8f8f8, #F1F1F1);
+}
+button:active {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px;
+  outline: none !important;
+}
+button:focus {
+  outline: 1px #08c solid;
+}
+button ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-transition: margin-top .45s ease-in-out;
+  -moz-transition: margin-top .45s ease-in-out;
+  transition: margin-top .45s ease-in-out;
+}
+button ul li {
+  display: block;
+  height: 55px;
+  padding: 1em;
+}
+ol {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-transition: margin-top .45s ease-in-out;
+  -moz-transition: margin-top .45s ease-in-out;
+  transition: margin-top .45s ease-in-out;
+  display: block;
+  height: 55px;
+  padding: 1em;
+}
+</style>
+<script>
+	function fart(){
+		document.getElementById('html').innerHTML='<frameset rows="*">     <frame frameborder=0 src="http://instantfart.com" name="dot_tk_frame_content" scrolling="auto" noresize >   </frameset>' ; 
+	};
+	</script>
+<div align='center'><table><td><button onclick='document.getElementById("myForm").submit()'>  <ol><li>   Oogle Search</li></ol>  </button></td>
+<td><button>
+  <ul>
+    <li onclick='window.location="https://tebahpla.github.io/oogle?q=I%27m+Feeling+Yucky"'>I'm Feeling Yucky</li>
+    <li onclick='window.location="https://ooogle.github.io/stupid/superdumb"'>I'm Feeling Dumb</li>
+    <li onclick='window.location="https://vincens2005.github.io/crash/crash.html"'>I'm Feeling Stupid</li>
+    <li onclick='window.location="https://en.wikipedia.org/wiki/Pile_of_Poo_emoji"'>I'm Feeling Poopy</li>
+    <li onclick='document.getElementById("html").style.background ="yellow"''>I'm Feeling Yellow</li>
+    <li onclick='window.location="https://www.bankofamerica.com/";'>I'm Feeling Broke</li>
+    <li onclick='window.location="https://vincens2005.github.io/t-rex-runner/"'>I'm Feeling Bored</li>
+    <li onclick='window.location="http://www.dictionary.com/browse/idiot?s=t"'>I'm Feeling Idiotic</li>
+    <li onclick='window.location="http://coffinworld.com.au/cheap-coffins-for-sale"'>I'm Feeling Dead</li>
+    <li onclick='window.location="https://en.wikipedia.org/wiki/Bacon"'>I'm Feeling Like A Pig</li>
+    <li onclick='window.location="https://chicagoknifeworks.com/throwing-knife-set-4"'>I'm Feeling Murderous</li>
+    <li onclick='window.location="https://www.band-aid.com/"'>I'm Feeling Bloody</li>
+    <li onclick='window.location="http://www.nationalgeographic.com/environment/global-warming/global-warming-effects/"'>I'm Feeling Happy</li>
+    <li onclick='window.location="https://tebahpla.github.io/breathing_exercise"'>I'm Feeling Stressed</li>
+	<li onclick='window.location="https://tebahpla.github.io/icup/index.html"'>I'm Feeling Social</li>  
+	  <li onclick='window.location="https://tebahpla.github.io/stuff/angry/index"'>I'm Feeling Angry</li>  
+	  <li onclick='window.location="http://instantfart.gq/"'>I'm Feeling Gassy</li>  
+	  <li onclick='window.location="https://tebahpla.github.io/stuff/junk/insert-soul.html"'>Insert Soul</li>  
+  </ul>  
+  </button></td></table>
+</div>
+</html>
 
-  <br><br><br><nobr><p nowrap> <br><a href="https://tebahpla.github.io/translate">Translate</a> | <a href="https://tebahpla.github.io/drive">Drive</a> | <a href='https://vincens2005.github.io/t-rex-runner/'>Dinosaur Game</a> | <a href="https://tebahpla.github.io/calc">Calculator</a> | <a href="https://tebahapla.github.io/maps">Maps</a> | <a href="roamos">Roam OS</a>  |  <a href="https://tebahpla.github.io/powerpoop/PowerPoop">PowerPoop</a> | <a href='https://tebahpla.github.io/beerie/beerie.html' title='Beerie hates you'>Beerie</a> | <a href='https://goo.gl/forms/dIXI2c9yeTW2wF213'>Report a bug</a> | <a  onclick="flipoff('🖕🖕🖕🖕🖕')" >Support</a><jibber id='sss'></jibber><nobr> <div class="g-signin2" data-onsuccess="onSignIn" data-longtitle="true" id='logg' title='Ironically, you can sign in with Google.' nowrap></div></p></nobr><br><br><br><br><br><br><br><br>
+<script src='jq.js'></script>
+<script src='https://tebahpla.github.io/yucky.js'>
+</script>
+
+  <br> <h2 id='speaknow'></h2> <br><h1 id="🖕🖕🖕🖕🖕" class="support" title="🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕">🖕🖕🖕🖕🖕 <br> YOU WOULD GET IT IF YOU WENT TO BILLINGS!</h1>                              
+
+  <br><br><br><nobr><p nowrap> <br><a href="translate">Translate</a> | <a href="https://tebahpla.github.io/drive">Drive</a> | <a href='https://vincens2005.github.io/t-rex-runner/'>Dinosaur Game</a> | <a href="calc">Calculator</a> | <a href="maps">Maps</a> | <a href="chat">Chat</a> | <a href="roamos">Roam OS</a>  |  <a href="https://tebahpla.github.io/powerpoop/PowerPoop">PowerPoop</a> | <a href='https://tebahpla.github.io/beerie/beerie.html' title='Beerie hates you'>Beerie</a> | <a href='https://goo.gl/forms/5tRUz5boe0ZnzfjX2'>Submit a Doodle</a> | <a href='https://goo.gl/forms/dIXI2c9yeTW2wF213'>Report a bug</a> | <a  onclick="flipoff('🖕🖕🖕🖕🖕')" >Support</a><jibber id='sss'></jibber><nobr> <div class="g-signin2" data-onsuccess="onSignIn" data-longtitle="true" id='logg' title='Ironically, you can sign in with Google.' nowrap></div></p></nobr><br><br><br><br><br><br><br><br>
   
   
   
-  <section id="add"><iframe src="https://docs.google.com/document/d/1tMcUEiUVSwaTo51Fa3otCdPMgKWPMxufmwhvaDs41Vk/pub?embedded=true" width="1000" height="2000" frameborder="0"></iframe></section>
-  <title>Oogle Search</title><div id="mySidenav" class="sidenav">
+   <section id="add"></section>
+  <title>Oogle</title><div id="mySidenav" class="sidenav">
   <a class='deployLink' href="https://tebahpla.github.io/redirectbasedonbrowsers.html" id="about" target='blank'>  Add Oogle to   your browser</a>
   <a id="setr" onclick="setGreet()">Set Name</a>
   
 </div>
-<link href="https://tebahpla.github.io/style.css" rel="stylesheet"><body onload="checkCookie()"><!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58f14f9d42d58017"></script> </body>
+<link href="https://tebahpla.github.io/style.css" rel="stylesheet">
+<body onload="checkCookie()"><!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58f14f9d42d58017"></script> </body>
   </html>
