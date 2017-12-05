@@ -1,0 +1,82 @@
+
+<html>
+<link rel='stylesheet' href='https://tebahpla.github.io/style.css'>
+<head>
+    <title>Oogle Search</title>
+    <link rel="shortcut icon" href="https://github.com/tebahpla/tebahpla.github.io/blob/master/C--fakepath-favicon.png?raw=true" type="image/x-icon" />
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .top-bar {
+            padding: 10px 60px;
+            position: relative;
+           
+        }
+
+        .top-bar .top-bar-brand {
+            max-width: 150px;
+            height: 30px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .top-bar h2 {
+            margin: 0;
+            font: 18px/normal 'Segoe UI', Arial, Helvetica, Sans-Serif;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .top-bar-inverse {
+            background: #004185;
+            border-bottom-color: #657b83;
+        }
+
+        .top-bar-inverse h2 {
+            color: #fff;
+        }
+
+        .top-bar-light {
+            background: #fff;
+            border-bottom-color: #657b83;
+        }
+
+        .top-bar-light h2 {
+            color: #000;
+        }
+
+        .main-content {
+            padding: 25px 100px 20px 100px;
+            position: relative;
+            overflow: auto;
+            flex: 1;
+        }
+
+        .full-page {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full-page">
+        <div id="top-bar" class="top-bar top-bar-light">
+            <a target="_blank" href="https://tebahpla.github.io/"><img src="https://tebahpla.github.io/oogle%20logo.svg" class="top-bar-brand" onerror="this.style.display='none'"/><h2></h2></a>
+        </div>
+        <div class="main-content">
+            <script type="text/javascript" id="bcs_js_snippet">
+                
+                "use strict";function setupInitialLayout(){var e='<div class="bcs-container-searchbox"><input class="bsc-searchbox" placeholder="'+searchQueryHint+'"></input><button class="bcs-searchbox-submit" onclick="bcsSearchBoxSubmit()"></button></div>';rootDiv.innerHTML+=e,currentQuery&&(document.getElementsByClassName("bsc-searchbox")[0].value=currentQuery),document.getElementsByClassName("bsc-searchbox")[0].addEventListener("keyup",function(e){e.preventDefault(),13==e.keyCode&&document.getElementsByClassName("bcs-searchbox-submit")[0].click()})}function bcsPaginationClick(e){var t=document.getElementsByClassName("bsc-searchbox")[0].value;currentOffset+=(e.innerHTML-currentPage)*resultsPerPage,currentPage=parseInt(e.innerHTML),getResults(t)}function displayResults(e,t){var r=document.createElement("div");r.id="bcs-results-div",r.innerHTML='<ol class="bcs-results">'+e+'<li class="bcs-pagination"><ul>'+t+"</ul></li></ol>",rootDiv.appendChild(r)}function bcsAlterQuery(e){document.getElementsByClassName("bsc-searchbox")[0].value=e,bcsSearchBoxSubmit()}function bcsSearchBoxSubmit(){var e=document.getElementsByClassName("bsc-searchbox")[0].value;currentPage=1,getResults(e)}function getResults(e){if(!searchLock&&(searchLock=!0,e&&e.trim())){var t=searchEndpoint+"?q="+encodeURIComponent(e)+"&customConfig="+customConfig+"&count="+resultsPerPage+"&offset="+currentOffset+"&mkt="+market+"&safeSearch="+safeSearch+"&textFormat=HTML&textDecorations="+hitHighlighting,r=new XMLHttpRequest;r.open("GET",t,!0),r.setRequestHeader("Content-type","application/json"),clientId&&r.setRequestHeader("X-MSEdge-ClientID",clientId),r.onload=formatAndDisplayResults,removeOldResults(),r.send()}}function formatAndDisplayResults(e){clientId||(clientId=e.currentTarget.getResponseHeader("X-MSEdge-ClientID"));var t=JSON.parse(e.currentTarget.responseText);if(t.error)return displayResults("<p>Unable to execute your query.</p>",""),void(searchLock=!1);if(!t.webPages)return displayResults("<p>No results were found for your query.</p>",""),void(searchLock=!1);var r=t.webPages.value,s="";t.queryContext&&t.queryContext.alteredQuery&&(s+='<li class="bcs-query-rewrite"><div class="bcs-altered-query">Including results for <a href="#'+t.queryContext.alteredQuery+'" onClick="bcsAlterQuery(\''+t.queryContext.alteredQuery+"'); return false;\">"+t.queryContext.alteredQuery+'</a>.</div><div>Do you want results only for <a href="#'+t.queryContext.originalQuery+'" onclick="bcsAlterQuery(\''+t.queryContext.alterationOverrideQuery+"'); return false;\">"+t.queryContext.originalQuery+"</a>?</div></li>");for(var a in r){if(a>=resultsPerPage)break;var n=r[a],i="";if(n.deepLinks){var c="",l="";for(var o in n.deepLinks){var u=n.deepLinks[o];if(u.snippet){var d='<li><h3><a target="_blank" href="'+u.url+'">'+u.name+"</a></h3><p>"+u.snippet+"</p></li>";o%2==1?l+=d:c+=d}}i='<div class="bcs-deep-links"><ul>'+c+"</ul><ul>"+l+"</ul></div>"}var p='">';n.openGraphImage&&n.openGraphImage.contentUrl&&imageCaption&&(p=' bcs-caption-with-image"><div class="bcs-caption-image"><img src="'+n.openGraphImage.contentUrl+'" onerror="this.style.display=\'none\'"/></div>'),s+='<li class="bcs-result"><h2><a target="_blank" href="'+n.url+'">'+n.name+'</a></h2><div class="bcs-caption'+p+'<div class="bcs-caption-text"><cite>'+n.displayUrl+"</cite><p>"+n.snippet+"</p></div></div>"+i+"</li>"}for(var m=t.webPages.totalEstimatedMatches,y=5,g=currentPage-Math.floor(y/2),f="";y>0&&g*resultsPerPage<m;)g<1?g++:(f+='<li><a onclick="bcsPaginationClick(this)" '+(g===currentPage?'class="bcs-current-page"':"")+">"+g+"</a></li>",y--,g++);showPoweredByLink&&(f+='<li style="float: right;"></li>'),displayResults(s,f),searchLock=!1}function removeOldResults(){var e=document.getElementById("bcs-results-div");e&&e.parentNode.removeChild(e)}var customConfig="286359750",searchEndpoint="https://ui.customsearch.ai/api/search",searchQueryHint="Search The web...",safeSearch="Moderate",market="en-us",resultsPerPage=10,cssUrl="https://hosteduxprod.blob.core.windows.net/public/CssTheme.1.css",hitHighlighting=true,imageCaption=true,showPoweredByLink=false,currentQuery="",urlParams,searchLock,currentPage=1,currentOffset=0,clientId="",isPreview="undefined"!=typeof previewResults,s=document.createElement("link");s.setAttribute("rel","stylesheet"),s.href=cssUrl,document.getElementsByTagName("head")[0].appendChild(s);var rootDiv;window.onload=function(){(rootDiv=document.getElementById("bcs_js_snippet").parentElement).classList.add("bcs-host-div"),(window.onpopstate=function(){var e,t=/\+/g,r=/([^&=]+)=?([^&]*)/g,s=function(e){return decodeURIComponent(e.replace(t," "))},a=window.location.search.substring(1);for(urlParams={};e=r.exec(a);)urlParams[s(e[1])]=s(e[2])})(),urlParams.q?currentQuery=urlParams.q:urlParams.query&&(currentQuery=urlParams.query),urlParams.offset&&(currentOffset=parseInt(urlParams.offset)),currentPage=1+Math.floor(currentOffset/resultsPerPage),setupInitialLayout(),isPreview?previewResults():currentQuery&&getResults(currentQuery)};
+            </script>
+        </div>
+</body>
+
+</html>
