@@ -1,10 +1,86 @@
+<head><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3362264853061823",
+    enable_page_level_ads: true
+  });
+	</script></head>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/calculator-icon-21.ico">
+<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="en-CA"><head><section><a href="calc"><meta content="https://github.com/tebahpla/tebahpla.github.io/blob/master/ooglecalc.png?raw=true" itemprop="image">
+<img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/ooglecalc.png?raw=true" class="floatin_oogle"><br>
+  </a><np id="greeting" translate="no"></np></section><br><br><br><br>
+  <script>
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+var user = "Example Name";
+function checkCookie() {
+    user=getCookie("username");
+    if (user != "") {
+        document.getElementById("greeting").innerHTML="Let's do some math, " + user+"!";
+        document.getElementById("setr").innerHTML="Change Name";
+    } else {
+      user = "Example Name"
+    }
+}
+function setGreet(){
+ user = prompt("What would you like Oogle to call you?",user);
+       if (user != "" && user != null) {
+           setCookie("username", user, 300);
+           document.getElementById("greeting").innerHTML="Welcome, " + user+".";
+           document.getElementById("setr").innerHTML="Change Name";
+           
+       
+}
+}
+function translater(){
+var txt= prompt("Text to translate:");
+document.getElementById('translator').innerHTML=txt;
+
+}
+</script>
+<np><iframe width="500" height="400" src="https://www.desmos.com/scientific" frameborder="0" scrolling="no" align="middle" ></iframe><br>
+ <p>Powered by <a href="https://www.desmos.com/" class="deploylink" target="_blank"><u>desmos.com</u></a></p></np>
+                       
+
+  <br><br><br><p> <br><div id='links'></div>  </p><br><br><br><br><br><br><br><br>
+  
+  
+  
+  <section id="add" translate="no"><iframe src="https://docs.google.com/document/d/1tMcUEiUVSwaTo51Fa3otCdPMgKWPMxufmwhvaDs41Vk/pub?embedded=true" width="1000" height="1000" frameborder="0"></iframe></section>
+<title translate="no">Oogle Calculator</title><div id="mySidenav" class="sidenav">
+  <a class='deployLink' href="#add" id="about" target='blank' translate="no">  Add Oogle to   Chrome</a>
+  <a id="setr" onclick="setGreet()" translate="no">Set Name</a>
+</div>
+<link href="style.css" rel="stylesheet"><body onload="checkCookie()"><!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58f14f9d42d58017"></script> </body>
+
+
 <script>
 function loadXMLDoc() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("links").innerHTML =
-      this.responseText.replace('<a href="'+window.location'">Calculator</a>', '<a href="https://ooogle.github.io/beta">Search</a>');
+      this.responseText.replace('<a href="https://tebahpla.github.io/calc">Calculator</a>', '<a href="https://ooogle.github.io/beta">Search</a>');
     }
   };
   xhttp.open("GET", "stuff/menulinks.html", true);
