@@ -74,19 +74,7 @@ document.getElementById('translator').innerHTML=txt;
 <link href="https://tebahpla.github.io/style.css" rel="stylesheet"><body onload="checkCookie()"><!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58f14f9d42d58017"></script> </body>
 
 
-<script>
-function loadXMLDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("links").innerHTML =
-      this.responseText.replace('<a href="https://tebahpla.github.io/calc">Calculator</a>', '<a href="https://ooogle.github.io/beta">Search</a>');
-    }
-  };
-  xhttp.open("GET", "xmlhttp_info.txt", true);
-  xhttp.send();
-}
-</script>
+
 <script>
 function loadXMLDoc() {
   var xhttp = new XMLHttpRequest();
