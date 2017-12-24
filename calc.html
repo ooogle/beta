@@ -84,6 +84,7 @@ function loadXMLDoc() {
 	    whut = this.responseText.replace('<a href="https://tebahpla.github.io/calc">Calculator</a>','<a href="https://ooogle.github.io/beta/">Search</a>');
       document.getElementById("links").innerHTML =
       this.responseText;
+	    alert(whut)
     }
   };
   xhttp.open("GET", "menulinks.txt", true);
