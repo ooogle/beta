@@ -77,9 +77,11 @@ document.getElementById('translator').innerHTML=txt;
 
 <script>
 function loadXMLDoc() {
+	var whut;
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
+	    whut = this.responseText.replace('<a href="https://tebahpla.github.io/calc">Calculator</a>','<a href="https://ooogle.github.io/beta/">Search</a>');
       document.getElementById("links").innerHTML =
       this.responseText;
     }
