@@ -81,7 +81,7 @@ function loadXMLDoc() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("links").innerHTML =
-      this.responseText.replace('<a href="'+window.location'">Calculator</a>', '<a href="https://ooogle.github.io/beta">Search</a>');
+      this.responseText;
     }
   };
   xhttp.open("GET", "menulinks.txt", true);
