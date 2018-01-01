@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html >
 
@@ -386,6 +387,12 @@ else if(m.text.includes("say ")){
 var newtext = m.text.replace("say ","")
 responsiveVoice.speak(newtext);
 
+
+}
+else if(m.text.includes("image ")){
+var newtext = m.text.replace("image ","")
+var thecode = output.innerHTML
+output.innerHTML = thecode.replace(new RegExp(m.text, 'g'), '<img src="'+newtext+'" />');
 
 }
 else if(m.text.includes("delete ")){
