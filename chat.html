@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html >
 
@@ -8,11 +9,104 @@
   <title>Oogle chat</title>
   
   
-  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
 
       <style>
-      
+       input.switch {
+  font-size: 10px;
+  position: relative;
+  display: inline-block;
+  appearance: none;
+  width: 3em;
+  height: 1.6em;
+  line-height: 1.6em;
+  border-radius: 0.8em;
+  margin: 0;
+  padding: 0;
+  box-shadow: inset 0 0 0 0.2em #eee;
+  outline: 1px solid transparent !important;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  transition: box-shadow .3s ease-in-out, padding .25s ease-in-out;
+  transition-delay: .1s, 0s;
+  /* Animations if supported */
+}
+input.switch:checked {
+  transition-delay: 0s, 0s;
+  box-shadow: inset 0 0 0 0.91429em #00c169 !important;
+  padding-left: 1.4em;
+}
+input.switch.hit {
+  animation: slide-off .35s ease both;
+}
+input.switch.hit:checked {
+  animation: slide-on  .35s ease both .05s;
+}
+input.switch::before, input.switch::after {
+  content: "";
+}
+input.switch::after {
+  /* Increases hit area */
+  position: absolute;
+  top: -0.4em;
+  left: -0.4em;
+  bottom: -0.4em;
+  right: -0.4em;
+}
+input.switch::before {
+  display: inline-block;
+  height: 1.2em;
+  width: 1.2em;
+  margin: 0.2em 0 0 0.2em;
+  background-color: #fff;
+  border-radius: 0.6em;
+  box-shadow: 0 0.2em 0.4em 0 rgba(0, 0, 0, 0.2), 0 0 0.1em 0.1em rgba(0, 0, 0, 0.1);
+  transition: all .1s ease .1s;
+}
+input.switch:active::before {
+  transition: all .1s ease .05s;
+}
+input.switch.touch:hover::before {
+  transition: all .0s ease .00s;
+}
+input.switch:active::before, input.switch.touch:hover::before {
+  width: 2em;
+}
+input.switch:active:checked::before, input.switch.touch:hover:checked::before {
+  margin-left: -0.6em;
+}
+
+@keyframes slide-on {
+  0% {
+    padding-left: 0em;
+  }
+  60% {
+    padding-left: 1.8em;
+  }
+  100% {
+    padding-left: 1.4em;
+  }
+}
+@keyframes slide-off {
+  0% {
+    padding-left: 1.4em;
+    text-indent: 0;
+  }
+  60% {
+    padding-left: 0em;
+    text-indent: -0.4em;
+  }
+  100% {
+    padding-left: 0em;
+    text-indent: 0;
+  }
+}
+
 html {
   height: 100%;
 }
@@ -302,7 +396,7 @@ document.getElementById('translator').innerHTML=text;
   </div>
   
 
-  <p class="presence" style="color:red;"></p>Sound <input type="checkbox" id="switch" onclick='funcThing()'/>
+  <p class="presence" style="color:red;"></p><p title='If you are have this open in a different tab, Oogle Chat will make a notification sound.'>Sound <input type="checkbox" class="switch" id="switch-1"/></p>
   <div class="output"></div>
 </section>
 
@@ -356,7 +450,7 @@ document.getElementById('translator').innerHTML=text;
     output.innerHTML = '<p><i class="avavav"><img src="'+m.avatar+'" class="avavav" width="40" /></i><span>' + m.text + '</span></p><br>' + output.innerHTML;
     if(document.visibilityState == "hidden"){
       spawnNotification(m.text, m.avatar, "Oogle Chat Message");
-      if( document.getElementById('switch').checked){
+      if( document.getElementById('switch-1').checked){
        var audio = new Audio("https://tebahpla.github.io/stuff/Cukmekerb's song.mp3");
 audio.play();
        
@@ -369,7 +463,7 @@ audio.play();
       output.innerHTML = '<p><i class="' + m.avatar + '"></i><span>' + m.text + '</span></p><br>' + output.innerHTML;
       if(document.visibilityState == "hidden"){
        spawnNotification(m.text, "https://tebahpla.github.io/stuff/chat/ooglechaticon.png", "Oogle Chat Message");
-       if( document.getElementById('switch').checked){
+       if( document.getElementById('switch-1').checked){
       var audio = new Audio("https://tebahpla.github.io/stuff/Cukmekerb's song.mp3");
 audio.play();
        
