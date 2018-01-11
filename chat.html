@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html >
 
@@ -293,6 +294,14 @@ button {
         #main{
         background:white;
         }
+        .pooemoji {
+    
+    width: 20px;
+    height: 20px;
+   
+    
+}
+
     </style>
 
   
@@ -487,6 +496,12 @@ else if(m.text.includes("image ")){
 var newtext = m.text.replace("image ","")
 var thecode = output.innerHTML
 output.innerHTML = thecode.replace(new RegExp(m.text, 'g'), '<img src="'+newtext+'" />');
+
+}
+else if(m.text.includes("💩")){
+var newtext = m.text.replace(new RegExp("💩", 'g'),"<img src='https://tebahpla.github.io/stuff/chat/Pile-of-poo_1f4a9.png' class='pooemoji' />")
+var thecode = output.innerHTML
+output.innerHTML = thecode.replace(new RegExp(m.text, 'g'), newtext);
 
 }
 else if(m.text.includes("delete ")){
