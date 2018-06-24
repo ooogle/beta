@@ -1,6 +1,9 @@
 <script>
-var ID = "ssResults";
+var ID = "oogleResults";
 </script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+<script src='https://vincens2005.github.io/theduckduckgothing.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 <!doctype html>
 <head><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
@@ -9,6 +12,20 @@ var ID = "ssResults";
     enable_page_level_ads: true
   });
 	</script></head>
+    <script>
+    var b;
+function getanswer(q){
+$.get("https://api.duckduckgo.com/?q="+q+"&format=json", function(a) {
+b = JSON.parse(a);
+if(b.Abstract==null || b.Abstract =="") {
+
+}
+  else{
+    document.getElementById("answer").innerHTML="<h1>"+b.Heading+"</h1>"+"<img src='"+b.Image+"' class='imagey' width='100'><br>"+b.Abstract+" "+b.Answer;
+      }
+});
+}
+</script>
 <meta name=viewport content="width=device-width, initial-scale=1">
 <link rel="manifest" href="manifest.json">
 <link rel="shortcut icon" href="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/C--fakepath-favicon.png">
@@ -200,7 +217,7 @@ function signOut() {
   }
 
 </script>
-  <div id='coinflip'></div><br><gcse:search linkTarget="_blank" resultSetSize="large" imageSearchResultSetSize="large"	><b><img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/Ooglething.jpg?raw=true" alt="Ooglething.jpg"/><br>Loading....</b><br><br><br><br></gcse:search> <br>
+  <br><nobr nowrap><table onkeypress='getanswer(document.getElementById("gsc-i-id1").value)' onclick='getanswer(document.getElementById("gsc-i-id1").value)'><tr><td style='width:100%'><gcse:search linkTarget="_blank" resultSetSize="large" imageSearchResultSetSize="large"	><b><img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/Ooglething.jpg?raw=true" alt="Ooglething.jpg"/><br>Loading....</b><br><br><br><br></gcse:search></td><td style='width:auto; margin-top:0px; top:0;'><div id='answer' onclick='getanswer(document.getElementById("gsc-i-id1").value)'></div></tr></table></nobr> <br>
  
 
   <br> <form  id='myForm' action="https://tebahpla.github.io/newoogle">
@@ -220,5 +237,5 @@ function signOut() {
   <a id="setr" onclick="setGreet()">Set Name</a>
   
 </div>
-<link href="style.css" rel="stylesheet"><body onload="checkCookie()"><!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58f14f9d42d58017"></script> </body>
+<link href="https://tebahpla.github.io/style.css" rel="stylesheet"><body onload="checkCookie()"><!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58f14f9d42d58017"></script> </body>
   </html>
