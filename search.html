@@ -1,82 +1,224 @@
+<script>
+var ID = "ssResults";
+</script>
+<!doctype html>
+<head><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3362264853061823",
+    enable_page_level_ads: true
+  });
+	</script></head>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<link rel="manifest" href="manifest.json">
+<link rel="shortcut icon" href="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/C--fakepath-favicon.png">
+<html itemscope="" itemtype="http://schema.org/WebPage" lang="en-CA" id='html'><head><section id="image"><a href="newerhome"><meta content="https://github.com/tebahpla/tebahpla.github.io/blob/master/alternite_logos/bounceoogle.png?raw=true" itemprop="image" draggable="true">
+<img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/ooglelogo.png.png?raw=true" class="floatin_oogle" draggable="true">
+  </a></section><np id="greeting" ondblclick="setGreet()" draggable="true" onclick='responsiveVoice.speak(document.getElementById("greeting").innerHTML)'></np><br><script src="https://apis.google.com/js/platform.js" async defer></script><script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+<style>
+  
+  .speech  { width: 40px; border: none; cursor: pointer;}
+  #transcript{ display: none}
+  #speaknow { text-align: center; cursor: progress;}
+</style>
+<meta name="google-signin-client_id" content="273615037515-ebr6473ifcvjvs306tt9hq4ekt1d0q9l.apps.googleusercontent.com"><script>
+  (function() {
+    var cx = '006871109958894476408:m3adoijc7za';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
 
-<html>
-<link rel='stylesheet' href='https://tebahpla.github.io/style.css'>
-<head>
-    <title>Oogle Search</title>
-    <link rel="shortcut icon" href="https://github.com/tebahpla/tebahpla.github.io/blob/master/C--fakepath-favicon.png?raw=true" type="image/x-icon" />
-    <style>
-        body {
-            margin: 0;
-            overflow-x: hidden;
+  <link rel='stylesheet' href='https://tebahpla.github.io/speech-recognition/speachreck.css'>
+<script>
+  
+   function submitit() { setTimeout(function(){ document.getElementById("myForm").submit(); }, 1000); }
+  function startDictation() {
+
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+      var recognition = new webkitSpeechRecognition();
+
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.lang = "en-US";
+      recognition.start();
+      document.getElementById('speaknow').innerHTML='Speak now...';
+
+      recognition.onresult = function(e) {
+        document.getElementById('transcript').value
+                                 = e.results[0][0].transcript;
+        document.getElementById('speaknow').innerHTML = e.results[0][0].transcript;
+        
+        recognition.stop();
+    submitit();
+      };
+
+      recognition.onerror = function(e) {
+      responsiveVoice.speak('there has been a speech recognition error. if you are using internet explorer, or microsoft edge, then use chrome. if you are using chrome then refresh the page');
+
+}
+
+    }
+  }
+</script>
+  <script>
+    
+   
+    if(window.location == 'https://tebahpla.github.io/oogle?q=flip+a+coin'){
+      document.getElementById('coinflip').innerHTML="<iframe src='https://tebahpla.github.io/coinflip.html' height='350' width='99%'></iframe>";
+    };
+    if(window.location.includes('askew')){
+      window.location='https://tebahpla.github.io/tests/askew#gsc.tab=0&gsc.q=askew&gsc.sort='
+    }
+  </script>
+  <script>
+    var n = Date().includes("Feb 14");
+    var m = Date().includes("Wed Jul 05");
+    var o = Date().includes("Fri Jun 02");
+    var baktoskool = Date().includes("Sep 07");
+    var peaceday = Date().includes("Sep 22");
+    var rabies = Date().includes("Sep 28");
+    var halloween =Date().includes("Oct 31");
+var genocide =Date().includes("Oct 09");	  
+	  var nathaniel =Date().includes("Oct 21");	  
+   
+ if(n == true){
+    document.getElementById("image").innerHTML='<a href="https://tebahpla.github.io/newerhome"><meta content="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/alternite_logos/ooglelogo%20v.png" itemprop="image"><img src="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/alternite_logos/ooglelogo%20v.png" class="floatin_oogle"></a>';
+    
+   };
+if(m == true){
+    document.getElementById("image").innerHTML='<a href="newerhome"><meta content="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/alternite_logos/IMG_0724.JPG" itemprop="image"><img src="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/alternite_logos/IMG_0724.JPG" class="floatin_oogle"></a>';
+    
+    };
+if(o == true){
+    document.getElementById("image").innerHTML='<a href="newerhome"><meta content="https://github.com/tebahpla/tebahpla.github.io/blob/master/alternite_logos/Oogle%20logo%20outline.png?raw=true" itemprop="image"><img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/alternite_logos/Oogle%20logo%20outline.png?raw=true" class="floatin_oogle"></a>';
+    };
+ if(baktoskool == true){
+    document.getElementById("image").innerHTML='<a href="newerhome"><meta content="https://tebahpla.github.io/alternite_logos/ooglebacktoskool.JPG" itemprop="image"><img src="https://tebahpla.github.io/alternite_logos/ooglebacktoskool.JPG" class="floatin_oogle"></a>';
+    };
+    if(peaceday == true){
+    document.getElementById("image").innerHTML='<a href="https://tebahpla.github.io/newoogle#gsc.tab=0&gsc.q=world%20peace%20day&gsc.sort="><meta content="https://tebahpla.github.io/alternite_logos/ooglepeace.png" itemprop="image"><img src="https://tebahpla.github.io/alternite_logos/ooglepeace.png" class="floatin_oogle"></a>';
+    
+    };
+    if(rabies == true){
+    document.getElementById("image").innerHTML='<a href="https://tebahpla.github.io/newoogle#gsc.tab=0&gsc.q=world%20rabies%20day&gsc.sort="><meta content="https://github.com/tebahpla/tebahpla.github.io/blob/master/alternite_logos/rabiesday.png?raw=true" itemprop="image"><img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/alternite_logos/rabiesday.png?raw=true" class="floatin_oogle" width="256"></a>';
+    
+    };
+     if(halloween == true){
+    document.getElementById("image").innerHTML='<a href="https://tebahpla.github.io/newoogle?q=Halloween"><meta content="https://github.com/tebahpla/tebahpla.github.io/blob/master/alternite_logos/halloween.png?raw=true" itemprop="image"><img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/alternite_logos/halloween.png?raw=true" class="floatin_oogle" ></a>';
+    
+    };
+ if(nathaniel == true){
+    document.getElementById("image").innerHTML='<a href="https://tebahpla.github.io/newoogle"><meta content="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/alternite_logos/nathaniels-birthday.png" itemprop="image"><img src="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/alternite_logos/nathaniels-birthday.png" class="floatin_oogle" ></a>';
+    
+    };
+	if(genocide == true){
+   document.getElementById("html").style.background ="url('https://github.com/tebahpla/tebahpla.github.io/blob/master/alternite_logos/totem.jpg?raw=true')";
+document.getElementById("html").style.background ="repeat: no-repeat;";
+document.getElementById("html").style.background ="position: right;";
+	 document.getElementById("image").innerHTML='<a href="https://tebahpla.github.io/oogle?q=Genocide%20or%20indigenous%20peoples%20day"><meta content="https://github.com/tebahpla/tebahpla.github.io/blob/master/alternite_logos/halloween.png?raw=true" itemprop="image"><img src="https://tebahpla.github.io/oogle%20logo.svg" class="floatin_oogle" title="Genocide Day"></a>';
+    
+    };  
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+user = profile.getName();
+  if(getCookie("signed") == null || getCookie("signed") == "" || getCookie("signed") == ' '){
+    user = profile.getName();
+    document.getElementById("greeting").innerHTML="Welcome, " + user+".";
+    setCookie("username", user, 3000);
+    setCookie("signed", "yes", 3000);
+  }
+  document.getElementById('sss').innerHTML=' | <a href="#" onclick="signOut();" >Sign out</a> ';
+  document.getElementById('logg').style.display = 'none';
+}
+    
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
         }
-
-        .top-bar {
-            padding: 10px 60px;
-            position: relative;
-           
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
         }
+    }
+    return "";
+}
+var user = "Example Name";
+function checkCookie() {
+    user=getCookie("username");
+    
+            
+    if (user != "") {
+        document.getElementById("greeting").innerHTML="Welcome back, " + user+".";
+        document.getElementById("setr").innerHTML="Change Name";
+        
+    } else {
+      user = "Example Name"
+    }
+}
+function setGreet(){
+ user = prompt("What would you like Oogle to call you?",user);
+       if (user != "" && user != null) {
+           setCookie("username", user, 3000);
+           document.getElementById("greeting").innerHTML="Welcome, " + user+".";
+           document.getElementById("setr").innerHTML="Change Name";
+       
+}
+}
+function flipoff(id){
+  var e = document.getElementById(id); 
+  if (e.style.display == 'block' || e.style.display=='') e.style.display = 'none'; else e.style.display = 'block';
+}
+  
+function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+      document.getElementById('logg').style.display = 'block';
+      document.getElementById('sss').innerHTML='';
+    });
+  }
 
-        .top-bar .top-bar-brand {
-            max-width: 150px;
-            height: 30px;
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
+</script>
+  <div id='coinflip'></div><br><gcse:search linkTarget="_blank" resultSetSize="large" imageSearchResultSetSize="large"	><b><img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/Ooglething.jpg?raw=true" alt="Ooglething.jpg"/><br>Loading....</b><br><br><br><br></gcse:search> <br>
+ 
 
-        .top-bar h2 {
-            margin: 0;
-            font: 18px/normal 'Segoe UI', Arial, Helvetica, Sans-Serif;
-            display: inline-block;
-            vertical-align: middle;
-        }
+  <br> <form  id='myForm' action="https://tebahpla.github.io/newoogle">
+  
+    <input type="text" name="q" id="transcript" placeholder="Speak" />
+   
+  
+  </form>  <img onclick="startDictation()" class='speech' src="mic.svg" width='37' height='37' /> <br><h2 id='speaknow'></h2> <br><h1 id="🖕🖕🖕🖕🖕" class="support" title="🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕">🖕🖕🖕🖕🖕 <br> YOU WOULD GET IT IF YOU WENT TO BILLINGS!</h1>                              
 
-        .top-bar-inverse {
-            background: #004185;
-            border-bottom-color: #657b83;
-        }
-
-        .top-bar-inverse h2 {
-            color: #fff;
-        }
-
-        .top-bar-light {
-            background: #fff;
-            border-bottom-color: #657b83;
-        }
-
-        .top-bar-light h2 {
-            color: #000;
-        }
-
-        .main-content {
-            padding: 25px 100px 20px 100px;
-            position: relative;
-            overflow: auto;
-            flex: 1;
-        }
-
-        .full-page {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="full-page">
-        <div id="top-bar" class="top-bar top-bar-light">
-            <a target="_blank" href="https://tebahpla.github.io/"><img src="https://tebahpla.github.io/oogle%20logo.svg" class="top-bar-brand" onerror="this.style.display='none'"/><h2></h2></a>
-        </div>
-        <div class="main-content">
-            <script type="text/javascript" id="bcs_js_snippet">
-                
-                "use strict";function setupInitialLayout(){var e='<div class="bcs-container-searchbox"><input class="bsc-searchbox" placeholder="'+searchQueryHint+'"></input><button class="bcs-searchbox-submit" onclick="bcsSearchBoxSubmit()"></button></div>';rootDiv.innerHTML+=e,currentQuery&&(document.getElementsByClassName("bsc-searchbox")[0].value=currentQuery),document.getElementsByClassName("bsc-searchbox")[0].addEventListener("keyup",function(e){e.preventDefault(),13==e.keyCode&&document.getElementsByClassName("bcs-searchbox-submit")[0].click()})}function bcsPaginationClick(e){var t=document.getElementsByClassName("bsc-searchbox")[0].value;currentOffset+=(e.innerHTML-currentPage)*resultsPerPage,currentPage=parseInt(e.innerHTML),getResults(t)}function displayResults(e,t){var r=document.createElement("div");r.id="bcs-results-div",r.innerHTML='<ol class="bcs-results">'+e+'<li class="bcs-pagination"><ul>'+t+"</ul></li></ol>",rootDiv.appendChild(r)}function bcsAlterQuery(e){document.getElementsByClassName("bsc-searchbox")[0].value=e,bcsSearchBoxSubmit()}function bcsSearchBoxSubmit(){var e=document.getElementsByClassName("bsc-searchbox")[0].value;currentPage=1,getResults(e)}function getResults(e){if(!searchLock&&(searchLock=!0,e&&e.trim())){var t=searchEndpoint+"?q="+encodeURIComponent(e)+"&customConfig="+customConfig+"&count="+resultsPerPage+"&offset="+currentOffset+"&mkt="+market+"&safeSearch="+safeSearch+"&textFormat=HTML&textDecorations="+hitHighlighting,r=new XMLHttpRequest;r.open("GET",t,!0),r.setRequestHeader("Content-type","application/json"),clientId&&r.setRequestHeader("X-MSEdge-ClientID",clientId),r.onload=formatAndDisplayResults,removeOldResults(),r.send()}}function formatAndDisplayResults(e){clientId||(clientId=e.currentTarget.getResponseHeader("X-MSEdge-ClientID"));var t=JSON.parse(e.currentTarget.responseText);if(t.error)return displayResults("<p>Unable to execute your query.</p>",""),void(searchLock=!1);if(!t.webPages)return displayResults("<p>No results were found for your query.</p>",""),void(searchLock=!1);var r=t.webPages.value,s="";t.queryContext&&t.queryContext.alteredQuery&&(s+='<li class="bcs-query-rewrite"><div class="bcs-altered-query">Including results for <a href="#'+t.queryContext.alteredQuery+'" onClick="bcsAlterQuery(\''+t.queryContext.alteredQuery+"'); return false;\">"+t.queryContext.alteredQuery+'</a>.</div><div>Do you want results only for <a href="#'+t.queryContext.originalQuery+'" onclick="bcsAlterQuery(\''+t.queryContext.alterationOverrideQuery+"'); return false;\">"+t.queryContext.originalQuery+"</a>?</div></li>");for(var a in r){if(a>=resultsPerPage)break;var n=r[a],i="";if(n.deepLinks){var c="",l="";for(var o in n.deepLinks){var u=n.deepLinks[o];if(u.snippet){var d='<li><h3><a target="_blank" href="'+u.url+'">'+u.name+"</a></h3><p>"+u.snippet+"</p></li>";o%2==1?l+=d:c+=d}}i='<div class="bcs-deep-links"><ul>'+c+"</ul><ul>"+l+"</ul></div>"}var p='">';n.openGraphImage&&n.openGraphImage.contentUrl&&imageCaption&&(p=' bcs-caption-with-image"><div class="bcs-caption-image"><img src="'+n.openGraphImage.contentUrl+'" onerror="this.style.display=\'none\'"/></div>'),s+='<li class="bcs-result"><h2><a target="_blank" href="'+n.url+'">'+n.name+'</a></h2><div class="bcs-caption'+p+'<div class="bcs-caption-text"><cite>'+n.displayUrl+"</cite><p>"+n.snippet+"</p></div></div>"+i+"</li>"}for(var m=t.webPages.totalEstimatedMatches,y=5,g=currentPage-Math.floor(y/2),f="";y>0&&g*resultsPerPage<m;)g<1?g++:(f+='<li><a onclick="bcsPaginationClick(this)" '+(g===currentPage?'class="bcs-current-page"':"")+">"+g+"</a></li>",y--,g++);showPoweredByLink&&(f+='<li style="float: right;"></li>'),displayResults(s,f),searchLock=!1}function removeOldResults(){var e=document.getElementById("bcs-results-div");e&&e.parentNode.removeChild(e)}var customConfig="286359750",searchEndpoint="https://ui.customsearch.ai/api/search",searchQueryHint="Search The web...",safeSearch="Moderate",market="en-us",resultsPerPage=10,cssUrl="https://hosteduxprod.blob.core.windows.net/public/CssTheme.1.css",hitHighlighting=true,imageCaption=true,showPoweredByLink=false,currentQuery="",urlParams,searchLock,currentPage=1,currentOffset=0,clientId="",isPreview="undefined"!=typeof previewResults,s=document.createElement("link");s.setAttribute("rel","stylesheet"),s.href=cssUrl,document.getElementsByTagName("head")[0].appendChild(s);var rootDiv;window.onload=function(){(rootDiv=document.getElementById("bcs_js_snippet").parentElement).classList.add("bcs-host-div"),(window.onpopstate=function(){var e,t=/\+/g,r=/([^&=]+)=?([^&]*)/g,s=function(e){return decodeURIComponent(e.replace(t," "))},a=window.location.search.substring(1);for(urlParams={};e=r.exec(a);)urlParams[s(e[1])]=s(e[2])})(),urlParams.q?currentQuery=urlParams.q:urlParams.query&&(currentQuery=urlParams.query),urlParams.offset&&(currentOffset=parseInt(urlParams.offset)),currentPage=1+Math.floor(currentOffset/resultsPerPage),setupInitialLayout(),isPreview?previewResults():currentQuery&&getResults(currentQuery)};
-            </script>
-        </div>
-</body>
-
-</html>
+  <br><br><br><nobr><p nowrap> <br><a href="translate">Translate</a> | <a href="https://tebahpla.github.io/drive">Drive</a> | <a href='https://vincens2005.github.io/t-rex-runner/'>Dinosaur Game</a> | <a href="calc">Calculator</a> | <a href="maps">Maps</a> | <a href="roamos">Roam OS</a>  |  <a href="https://tebahpla.github.io/powerpoop/PowerPoop">PowerPoop</a> | <a href='https://tebahpla.github.io/beerie/beerie.html' title='Beerie hates you'>Beerie</a> | <a href='https://goo.gl/forms/dIXI2c9yeTW2wF213'>Report a bug</a> | <a  onclick="flipoff('🖕🖕🖕🖕🖕')" >Support</a><jibber id='sss'></jibber><nobr> <div class="g-signin2" data-onsuccess="onSignIn" data-longtitle="true" id='logg' title='Ironically, you can sign in with Google.' nowrap></div></p></nobr><br><br><br><br><br><br><br><br>
+  
+  
+  
+  <section id="add"><iframe src="https://docs.google.com/document/d/1tMcUEiUVSwaTo51Fa3otCdPMgKWPMxufmwhvaDs41Vk/pub?embedded=true" width="1000" height="2000" frameborder="0"></iframe></section>
+  <title>Oogle Search</title><div id="mySidenav" class="sidenav">
+  <a class='deployLink' href="https://tebahpla.github.io/redirectbasedonbrowsers.html" id="about" target='blank'>  Add Oogle to   your browser</a>
+  <a id="setr" onclick="setGreet()">Set Name</a>
+  
+</div>
+<link href="style.css" rel="stylesheet"><body onload="checkCookie()"><!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58f14f9d42d58017"></script> </body>
+  </html>
