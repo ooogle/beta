@@ -19,7 +19,7 @@ function getanswer(q){
 $.get("https://api.duckduckgo.com/?q="+q+"&format=json", function(a) {
 b = JSON.parse(a);
 if(b.Abstract==null || b.Abstract =="") {
-alert('poo')
+
 }
   else{
     document.getElementById("answer").innerHTML="<h1>"+b.Heading+"</h1>"+"<img src='"+b.Image+"' class='imagey' width='100'><br>"+b.Abstract+" "+b.Answer;
