@@ -14,15 +14,16 @@ var ID = "oogleResults";
 	</script></head>
     <body onload="checkCookie(); getanswer(document.getElementById('gsc-i-id1').value)" onmouseover='getanswer(document.getElementById("gsc-i-id1").value)'>
     <script>
-    var b;
+  var b;
 function getanswer(q){
 $.get("https://api.duckduckgo.com/?q="+q+"&format=json", function(a) {
 b = JSON.parse(a);
-if(b.Abstract==null || b.Abstract =="") {
-
+if(b.Abstract=="") {
+  $( "#answer" ).addClass( "hiding");
+  document.getElementById('answer').innerHTML='<p>no results found</p>'
 }
   else{
-    document.getElementById("answer").innerHTML="<h1>"+b.Heading+"</h1>"+"<img src='"+b.Image+"' class='imagey' width='100'><br>"+b.Abstract+" "+b.Answer;
+     $( "#answer" ).removeClass( "hiding");document.getElementById("answer").innerHTML="<h1>"+b.Heading+"</h1><img src='"+b.Image+"' class='imagey' width='175'><br><p>"+b.Abstract+"</p>";
       }
 });
 }
@@ -217,8 +218,8 @@ function signOut() {
     });
   }
 
-</script><div style='width:auto; margin-top:0px; top:0; right:0' id='answer' onclick='getanswer(document.getElementById("gsc-i-id1").value)'></div>
-  <br><div onkeypress='getanswer(document.getElementById("gsc-i-id1").value)' onclick='getanswer(document.getElementById("gsc-i-id1").value)' onload='getanswer(document.getElementById("gsc-i-id1").value)'><gcse:search onkeypress='getanswer(document.getElementById("gsc-i-id1").value)' onclick='getanswer(document.getElementById("gsc-i-id1").value)' onload='getanswer(document.getElementById("gsc-i-id1").value)'><b><img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/Ooglething.jpg?raw=true" alt="Ooglething.jpg"/><br>Loading....</b><br><br><br><br></gcse:search></div> <br>
+</script>
+  <br><table onkeypress='getanswer(document.getElementById("gsc-i-id1").value)' onclick='getanswer(document.getElementById("gsc-i-id1").value)' onload='getanswer(document.getElementById("gsc-i-id1").value)'><tr><td style='width:100%; height:100%'><gcse:search onkeypress='getanswer(document.getElementById("gsc-i-id1").value)' onclick='getanswer(document.getElementById("gsc-i-id1").value)' onload='getanswer(document.getElementById("gsc-i-id1").value)'><b><img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/Ooglething.jpg?raw=true" alt="Ooglething.jpg"/><br>Loading....</b><br><br><br><br></gcse:search></td><td style='width:30%; height:100%'><div style='width:auto; margin-top:0px; top:0; right:0' id='answer' onclick='getanswer(document.getElementById("gsc-i-id1").value)' class='hiding'></div></td></tr></table> <br>
  
 
   <br> <form  id='myForm' action="https://tebahpla.github.io/newoogle">
