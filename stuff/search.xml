@@ -3,7 +3,7 @@
   <ShortName>Oogle</ShortName>
   <Description>Search the web with Oogle, the BEST search engine</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="24" height="26" type="image/x-icon">https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/C--fakepath-favicon.png</Image>
+  <Image width="24" height="26" type="image/png">https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/C--fakepath-favicon.png</Image>
   <Url type="text/html" method="get" template="https://tebahpla.github.io/newoogle?q={searchTerms}"/>
   <moz:SearchForm>https://tebahpla.github.io/newoogle</moz:SearchForm>
 </OpenSearchDescription>
