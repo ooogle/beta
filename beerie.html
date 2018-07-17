@@ -1,0 +1,407 @@
+
+
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon"  href="https://tebahpla.github.io/beerie/OogleBeerie.png" />
+  
+  <title>Beerie</title>
+  <meta name="viewport" content="device-width">
+  
+
+
+  
+      <style>
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+#containn{
+  text-align: right;
+}
+#mic{
+  bottom: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #34abfa;
+  padding-top: 5%;
+  font-size: 5px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.iphone {
+  position: relative;
+  background: #202020;
+  width: 45%;
+  height: 0;
+  padding-top: 95%;
+  margin: 0 auto;
+  border-radius: 3em;
+}
+
+.power {
+  position: absolute;
+  background: #202020;
+  width: 13%;
+  height: .5%;
+  top: -.5%;
+  right: 12%;
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+}
+
+.lock {
+  position: absolute;
+  background: #202020;
+  width: 1%;
+  height: 5%;
+  top: 12.5%;
+  left: -1%;
+  border-top-left-radius: .5em;
+  border-bottom-left-radius: .5em;
+}
+
+.volume {
+  position: absolute;
+  background: #202020;
+  width: 1%;
+  height: 4%;
+  top: 23%;
+  left: -1%;
+  border-top-left-radius: .5em;
+  border-bottom-left-radius: .5em;
+}
+
+.volume.down{ top: 31%; }
+
+.camera {
+  position: absolute;
+  top: 4%;
+  left: 48.5%;
+  background: #3f3f3f;
+  width: 3%;
+  height: 0;
+  padding-top: 3%;
+  border-radius: 50%;
+}
+
+.speaker {
+  position: absolute;
+  top: 7%;
+  left: 42.5%;
+  background: #3f3f3f;
+  width: 15%;
+  height: 0;
+  padding-top: 3%;
+  border-radius: 1em;
+}
+
+.appleicon {
+  padding-top: 25%;
+  opacity: 0;
+  -webkit-animation: unhide 5s infinite alternate;
+          animation: unhide 5s infinite alternate;
+}
+
+.appleicon img{
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  opacity: 0;
+  font-size: 1.25rem;
+  text-align: center;
+  -webkit-animation: unhide 5s infinite alternate;
+          animation: unhide 5s infinite alternate;
+}
+
+.screen {
+  background: white;
+  width: 90%;
+  height: 75%;
+  position: absolute;
+  top: 12.5%;
+  left: 5%;
+  -webkit-animation: lighten 20s infinite alternate;
+          animation: lighten 20s infinite alternate;
+}
+.screen:hover{
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+   background: white;
+}
+.full{
+    width: 100%;
+    height: auto;
+}
+.button {
+  position: absolute;
+  bottom: 2.75%;
+  left: 42.5%;
+  background: #3f3f3f;
+  /* border: 1px solid #3f3f3f; */
+  width: 15%;
+  height: 0;
+  padding-top: 15%;
+  border-radius: 50%;
+}
+
+.square {
+  position: absolute;
+  top: 27.5%;
+  left: 27.5%;
+  border: 2px solid #d7d7d7;
+  border-radius: .3em;
+  width: 45%;
+  height: 45%;
+}
+
+@media screen and (min-width: 28em ) {
+  body{ font-size: 8px; }
+}
+
+@media screen and (min-width: 34em ) {
+  body{ font-size: 10px; }
+}
+
+@media screen and (min-width: 48em ) {
+  body{ font-size: 14px; }
+}
+
+@-webkit-keyframes lighten {
+  
+  65%, 100% {  background: #2f2f2f; }
+  0%, 45% { background: #f7f7f7; }
+}
+
+@keyframes lighten {
+  
+  65%, 100% {  background: #2f2f2f; }
+  0%, 45% { background: #f7f7f7; }
+}
+
+@-webkit-keyframes unhide {
+  0%, 55% { opacity: 0 }
+  75%, 100% { opacity: 1 }
+}
+
+@keyframes unhide {
+  0%, 55% { opacity: 0 }
+  75%, 100% { opacity: 1 }
+}
+    </style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+</head>
+
+<body translate="no" >
+
+  
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+<body id='html'>
+<div align='center'><h1>Beerie</h1></div><br>
+<div class="wrapper"  >
+  <div class="iphone">
+    
+    <div class="lock"></div>
+    <div class="volume up" ></div>
+    <div class="volume down"></div>
+    <div class="camera"></div>
+    <div class="speaker"></div>
+    <div class="screen" id='screen'>
+      <!-- Put screen stuff in here -->
+      <br><br><br><br><br><br><br><br>
+      <p id='containn'><b id='what-you-said'> </b></p>
+      <br><br>
+      <b id='beerie-response'> </b><br><br><br>
+      <div id='gps' align='center'></div>
+      <div id='mic' align='center'>
+        <img onclick="startDictation()" class='speech' src="https://tebahpla.github.io/mic.svg" width='37' height='37' /><br>
+        <h1 id='speaknow'></h1>
+      </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
+</body>
+    <script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script >
+    function say(re){
+  document.getElementById('beerie-response').innerHTML = re;
+  responsiveVoice.speak(re);
+} 
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {if (window.CP.shouldStopExecution(2)){break;}
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {if (window.CP.shouldStopExecution(1)){break;}
+            c = c.substring(1);
+        }
+window.CP.exitedLoop(1);
+
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+window.CP.exitedLoop(2);
+
+    return "";
+}
+var user = getCookie('username');
+var whatYouSaid;
+function analise(){
+  if(whatYouSaid.includes('play') || whatYouSaid.includes('Play')){
+   say('Okay, playing Burn in Hell by Twisted Sister');
+   setTimeout(function(){ window.location='https://tebahpla.github.io/beerie/burn%20in%20hell.mp4'; },4000) 
+  }
+  else if(whatYouSaid.includes('minecraft') || whatYouSaid.includes('Minecraft') || whatYouSaid.includes('metal') || whatYouSaid.includes('Meatl')|| whatYouSaid.includes('sammy') || whatYouSaid.includes('Sammy')){
+   say('Okay, playing Sammy Metal Mincraft Episode one: Dont Feed Animals');
+   setTimeout(function(){ window.location='https://sammymetalminecraft.github.io/1.html'; },4000) 
+  }
+  else if(whatYouSaid.includes('hi') ||whatYouSaid.includes('Hi') || whatYouSaid.includes('poop') || whatYouSaid.includes('Hello') || whatYouSaid.includes('hello')){
+    say('Hello, shitty')
+  }
+ else if(whatYouSaid.includes('go poop') ||whatYouSaid.includes('Go poop') || whatYouSaid.includes('poop') || whatYouSaid.includes('Poop')){
+    say('You should go shit yourself')
+  }
+  else if(whatYouSaid.incudes('52') || whatYouSaid.includes('Fifty') || whatYouSaid.includes('fifty') || whatYouSaid.includes('factorial') || whatYouSaid.includes('Factorial'){
+          say(' Fify Two factorial is 80658175170943878571660636856403766975289505440883277824000000000000');
+}
+ else if(whatYouSaid.includes('time') || whatYouSaid.includes('Time')){
+    say('Go look at a clock, you shitty bum!')
+  }
+ else if(whatYouSaid.includes('what') || whatYouSaid.includes('Who') || whatYouSaid.includes('What') || whatYouSaid.includes('who') || whatYouSaid.includes('why') || whatYouSaid.includes('Why') || whatYouSaid.includes('what')){
+    say("I'm not an answering machine. Go look it up yourself!")
+  }
+ else if(whatYouSaid.includes('Slytherin')){
+     say("I'm in Slytherin")
+    document.getElementById("html").style.background ="#30a300";
+     }
+  else if(whatYouSaid.includes('Hufflepuff')){
+    say('Hufflepuff is shit');
+     document.getElementById("html").style.background ="#30a300";
+  }
+ else if(whatYouSaid.includes('Ravenclaw')){
+    say('Ravenclaw is a flying turd');
+     document.getElementById("html").style.background ="#30a300";
+  }
+ else if(whatYouSaid.includes('Gryffindor')){
+    say('Gryffindors should burn in Hell');
+     document.getElementById("html").style.background ="#30a300";
+  }
+ else if(whatYouSaid.includes('murder') || whatYouSaid.includes('Murder')){
+    say('I have committed omnicide fifteen times!')
+  }
+   else if(whatYouSaid.includes('friend') || whatYouSaid.includes('Friend')){
+    say('Friends? I don\'t need friends. I have the internet.')
+  }
+ else if(whatYouSaid.includes('call') || whatYouSaid.includes('Call')){
+    say('Okay, calling Lord Moldyshorts')
+    document.getElementById('screen').innerHTML="<img src='https://github.com/tebahpla/tebahpla.github.io/blob/master/beerie/moldyshorts.jpg?raw=true'  class='full' onclick='startDictation()'>";
+  }
+      else if(whatYouSaid.includes('Donald Trump') ||  whatYouSaid.includes('trump') || whatYouSaid.includes('Trump') ||  whatYouSaid.includes('donald') ||  whatYouSaid.includes('Donald') ||  whatYouSaid.includes('phone') ||  whatYouSaid.includes('Phone') ||  whatYouSaid.includes('cellphone') ||  whatYouSaid.includes('Cellphone') ||  whatYouSaid.includes('password') ||  whatYouSaid.includes('Password') ||  whatYouSaid.includes('passcode') ||  whatYouSaid.includes('Passcode')){
+        say("Donald Trump, president of the united states's iPhone passcode is '123456');
+            }
+ else if(whatYouSaid.includes('Open the pod bay door') || whatYouSaid.includes('open the pod bay door')){
+    if(user == null || user == "" || user == " "){
+    say("I'm sorry Dave,   I'm afraid I cannot do that.")
+    }
+    else{
+      say("I'm sorry "+user+",   I'm afraid I cannot do that.")
+    }
+  }
+ else if(whatYouSaid == 'Make me bored'|| whatYouSaid == 'make me bored' || whatYouSaid.includes('bore') || whatYouSaid.includes('Bore') || whatYouSaid.includes('pi') || whatYouSaid.includes('Pi')){
+    var whut;
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+	    whut = this.responseText;
+      say(whut);
+	 
+    };
+      xhttp.open("GET", "pi.txt", true);
+  xhttp.send();
+  }
+  else if(whatYouSaid.includes('bathroom')|| whatYouSaid.includes('Bathroom') || whatYouSaid.includes('toilet') || whatYouSaid.includes('Toilet') || whatYouSaid.includes('restroom') || whatYouSaid.includes('Restroom') || whatYouSaid.includes('loo') || whatYouSaid.includes('Loo')){
+    say("Did you know urinating is social? According to the Inventively Cooperative Urinal Project, or more commonly ICUP, having conversations while urinating can improve the health of small-bladdered people such as yourself. They are currently instaling three-person urinals in public bathrooms throughout the puget sound area.")
+  }
+  else if(whatYouSaid.includes('take me') || whatYouSaid.includes('Take me') ||  whatYouSaid.includes('guide me') || whatYouSaid.includes('Guide me') || whatYouSaid.includes('drive me') || whatYouSaid.includes('Drive me')){
+    say("You can download my incompetent GPS voice to take you where ever. Simply get the waze app on your phone and go to link.oogle.gq/beerie GPS from your phone's browser")
+    document.getElementById('gps').innerHTML='<a href="https://www.waze.com/"><img src="https://tebahpla.github.io/beerie/Waze_logo_tagline_blueback.jpg" width="300"/></a> <br><br>';
+  }
+  else{
+    say("Here's what I found on the web for: "+whatYouSaid+".")
+    setTimeout(function(){ window.location='https://tebahpla.github.io/newoogle?q='+whatYouSaid; },5000) 
+  }
+}
+
+
+  function startDictation() {
+    SpeechRecognition.SpeechRecognition()
+      var recognition = SpeechRecognition;
+      recognition.continuous = false;
+      recognition.interimResults = false;
+      recognition.lang = "en-US";
+      recognition.start();
+      document.getElementById('speaknow').innerHTML='Speak now...';
+      recognition.onresult = function(e) {
+        
+        document.getElementById('speaknow').innerHTML = e.results[0][0].transcript;
+         document.getElementById('what-you-said').innerHTML = e.results[0][0].transcript;
+       whatYouSaid = e.results[0][0].transcript;
+        
+        recognition.stop();
+        analise();
+    
+      
+      recognition.onerror = function(e) {
+      responsiveVoice.speak('there has been a speech recognition error. if you are using internet explorer, or microsoft edge, then you are an idiot, and should use chrome. if you are using chrome then refresh the page.');
+}
+    }
+  }
+
+  function start(){
+   responsiveVoice.speak("Hi, I'm Beerie, your stupid unhelpful assistant. You can talk to me now.");
+   
+ };
+  start();
+  setTimeout(function(){ startDictation(); }, 5000)
+  //# sourceURL=pen.js
+  </script>
+
+  
+  
+
+</body>
+</html>
+ 
