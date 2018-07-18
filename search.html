@@ -31,6 +31,9 @@ function getanswer(q){
     else  if(q == "Bokhead Pictures" || q=="bokhead pictures" || q == "bokheadpictures" || q =="blockhead pictures" || q== "Blockhead Pictures"){
   $( "#answer" ).removeClass( "hiding");document.getElementById("answer").innerHTML="<h1>Bokhead Pictures</h1><img src='https://github.com/bokheadpictures/bokheadpictures.github.io/blob/master/Bokeadpictures.jpg?raw=true' class='imagey' width='175'><br><p>Bokhead Pictures is an independent film company based somewhere. They were founded in 2014 by Vincent Singer-Henriquez. Their first published short film, Robbie was published to YouTube in 2015. They are currently writing and develoing a new film, which they have not anounced any details about.</p>";
   }
+  else  if(q == "donald trump" || q=="trump" || q == "Donald Trump" || q =="Trump" || q== "donald j trump" || q=="Donald J Trump" || q=="stupid" ||q=="dumb" || q=="Stupid"|| q=="Dumb" ||q=="idiot"||q=="Idiot"){
+  $( "#answer" ).removeClass( "hiding");document.getElementById("answer").innerHTML="<h1>Donald Trump</h1><img src='https://duckduckgo.com/i/db9fefe0.jpg' class='imagey' width='175'><br><p>Donald John Trump is an idiot and the 45th and current President of the United States, in office since January 20, 2017. Before entering politics, he was a businessman and television personality.</p>";
+  }
   else{
 if(q == "poop" || q== "Poop" || q=="poo" || q=="Poo"){
 q = "feces"
@@ -41,6 +44,10 @@ b = JSON.parse(a);
 if(b.Abstract=="") {
   $( "#answer" ).addClass( "hiding");
   document.getElementById('answer').innerHTML='<p>no results found</p>'
+}
+else if(b.Image=="") {
+$( "#answer" ).removeClass( "hiding");document.getElementById("answer").innerHTML="<h1>"+b.Heading+"</h1><br><p>"+b.Abstract+"</p>";
+      
 }
   else{
      $( "#answer" ).removeClass( "hiding");document.getElementById("answer").innerHTML="<h1>"+b.Heading+"</h1><img src='"+b.Image+"' class='imagey' width='175'><br><p>"+b.Abstract+"</p>";
@@ -242,7 +249,7 @@ function signOut() {
   }
 
 </script>
-  <br><table onkeypress='getanswer(document.getElementById("gsc-i-id1").value)' onclick='getanswer(document.getElementById("gsc-i-id1").value)' onload='getanswer(document.getElementById("gsc-i-id1").value)'><tr><td style='width:100%; height:100%'><gcse:search onkeypress='getanswer(document.getElementById("gsc-i-id1").value)' onclick='getanswer(document.getElementById("gsc-i-id1").value)' onload='getanswer(document.getElementById("gsc-i-id1").value)'><b><img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/Ooglething.jpg?raw=true" alt="Ooglething.jpg"/><br>Loading....</b><br><br><br><br></gcse:search></td><td style='width:30%; height:100%'><div style='width:auto; margin-top:0px; top:0; right:0 height:100%' id='answer' onclick='getanswer(document.getElementById("gsc-i-id1").value)' class='hiding'></div></td></tr></table> <br>
+  <br><table  onload='getanswer(document.getElementById("gsc-i-id1").value)' style="height:50% !important;"><tr><td style='width:100%; height:100%'><gcse:search onkeypress='getanswer(document.getElementById("gsc-i-id1").value)'  onload='getanswer(document.getElementById("gsc-i-id1").value)'><b><img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/Ooglething.jpg?raw=true" alt="Ooglething.jpg"/><br>Loading....</b><br><br><br><br></gcse:search></td><td style='width:30%; height:100% !important'><div style='width:auto; margin-top:0px !important; top:0 !important; right:0; height:100% !important' id='answer' align="top" class='hiding'></div></td></tr></table> <br>
  
 
   <br> <form  id='myForm' action="https://tebahpla.github.io/newoogle">
