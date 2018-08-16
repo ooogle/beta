@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+
+<head>
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<style>
+      
+form {
+                width:80px !important;
+                 display: block ;
+        margin-left: auto ;
+        margin-right: auto ;
+}
+  iframe{
+    width:200px !important;
+  }
+.speech-input {
+                padding:0px 15px;
+                background:rgba(50, 50, 50, 0.2) ;
+                border:3px solid #540e54 !important ;
+                width: 230px !important;
+}
+.button {
+                position:relative;
+                padding:6px 15px;
+                left:-35px !important;
+                border:2px solid #207cca !important;
+                background-color:#207cca !important;
+                color:#fafafa !important;
+}
+.button:hover  {
+                background-color:#fafafa !important;
+                color:#207cca !important;
+}
+
+</style>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Oogle</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Oogle" />
+    <meta property="og:image" content="https://igappblobs.azureedge.net/users/2097917/2363698/apple-touch-icon-precomposed.png?v=12" />
+    <meta property="og:url" content="https://app.igenapps.com/2363698" />
+    <meta property="og:description" content="Check out this App &#64;iGenApps" />
+    <meta name="theme-color" content="#FF0E19">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FF0E19">
+    <meta name="appiconurlpath" content="https://igappblobs.azureedge.net/users/2097917/2363698">
+    
+    <script>
+        var nav = navigator;
+        if ('serviceWorker' in nav) {
+            console.log('Service Worker is supported');
+            nav.serviceWorker.register('/swoffline.js').then(function (reg) {
+                console.log(':^)', reg);
+            
+            }).catch(function (error) {
+                console.log(':^(', error);
+            });
+        }
+        var ios7 = nav.userAgent.match(/(iPad|iPhone|iPod touch);.*CPU.*OS 7_\d/i);
+        var ios8 = nav.userAgent.match(/(iPad|iPhone|iPod touch);.*CPU.*OS 8_\d/i);
+        if (ios7 || ios8) {
+            document.write('<link href="https://kendo.cdn.telerik.com/2017.1.118/styles/kendo.mobile.common.min.css" rel="stylesheet" />');
+        }
+        function NoSplash() {
+            console.log('splash issue')
+            document.getElementById("splash-screen").style.display = "none";
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="https://igserviceaka.azureedge.net/app/style?usercolor=%23FF0E19&v=5ba276af-711f-40db-8510-f27d90524182" />
+        <link rel="manifest" href="https://app.igenapps.com/manifest?user=2097917&app=oogle&secure=False&version=12&c=%23FF0E19&title=Oogle+&appid=2363698&userid=2097917">
+</head>
+<body>
+    <noscript>
+        <p>Please enable JavaScript to access this App.</p>
+    </noscript>
+    <div id="splash-screen" class="user-color-background">
+        <img id="splash-icon" src="https://igappblobs.azureedge.net/users/2097917/2363698/apple-touch-icon-precomposed.png?v=12" alt="icon-splash" onerror="NoSplash()" style="position:relative;left: 33.3%;width:33.3%;">
+    </div>
+    
+<div data-id="iGenAppsAdd2Home" data-role="layout"></div>
+<div data-role="view" data-title="" id="index" data-layout="iGenAppsAdd2Home" data-init="ShowAdd2Home">
+
+    <div data-role="content" id="a2h-content">
+
+    </div>
+
+    
+
+<div id="a2h-modal-background"></div>
+    <div id="a2h-modal-menu-pointer">
+        <span class="icon-stack icon-lg">
+            <i class="icon icon-angle-up icon-stack" style="font-size:1.5em"></i>
+            <i class="icon icon-more-vert icon-stack" style="font-size:1.5em;margin-top:-1.8em"></i>
+        </span>
+    </div>
+    <div id="a2h-modal-content">
+        <img id="a2h-android-img-prompt" src="" />
+        <img id="a2h-android-img" src="" />
+
+    </div>
+
+    
+<div id="a2h-modal-background"></div>
+<div id="ios-modal-menu-pointer">
+   
+    <i id="icon1" class="icon icon-normanortiz-action icon-2x"></i>
+    <i id="icon2" class="icon icon-angle-down icon-3x"></i>
+</div>
+<div id="ios-modal-content">
+    
+   
+    <img id="a2h-ios-img-popup" />
+    <div id="a2h-ios-img" >
+        <div id="ios-inner-top" class="ios-inner">&nbsp;</div>
+        <img id="a2h-ios-img-inner" />
+        <div id="ios-inner-bottom" class="ios-inner">&nbsp;</div>
+    </div>
+   
+</div>
+
+</div>
+
+<script type="text/x-kendo-template" id="ioscontent">
+    <div id="a2hios" class="a2h">
+
+        <div id="icon-profile">
+            <a id="installios" data-role="button" data-localize="ios.install">GET</a>
+            <a id="open-ios" data-role="button" data-icon="details" href="\#0" data-localize="ios.open">OPEN</a><br />
+            <h2>
+                #=name#<br />
+                <small>#=by#</small>&nbsp;<img id="ios-cname" height="8" src="" />
+
+
+            </h2>
+
+            <img id="ios-ratings" src="" />
+            #if (icon) {#
+              <img id="iconimg" src="https://igappblobs.azureedge.net/users/2097917/2363698/apple-touch-icon-precomposed.png?v=#=ver#" onerror="">
+           #} else {#
+             <img id="iconimg" src="https://igstatic.azureedge.net/users/mobile/site/apple-touch-icon-precomposed.png?v=#=ver#">
+            #}#
+
+        </div>
+        <div style="clear:both;"></div>
+        <div id="Description-profile" style="margin-top:0;">
+            <h2 data-localize="description">Description</h2>
+            <p>
+                #=desc#
+            </p>
+        </div>
+        <div id="line"></div>
+        <div id="Inline2-profile">
+            <h2 data-localize="ios.information">Information</h2>
+            <p>
+                <table style="margin-left:42px;margin-top:-10px;">
+                    <tr>
+                        <td align="right" style="color:darkgray">
+                            <small><span data-localize="ios.category">Category</span></small>
+                        </td>
+                        <td style="padding-left:15px">
+                            <small><span>#=cat#</span></small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="color:darkgray">
+                            <small><span data-localize="ios.updated">Updated</span></small>
+                        </td>
+                        <td style="padding-left:15px">
+                            <small><span>#=created#</span></small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="color:darkgray">
+                            <small><span data-localize="version">Version</span></small>
+                        <td style="padding-left:15px">
+                            <small><span>#=ver#.0</span></small>
+                        </td>
+                    </tr>
+                </table>
+            </p>
+
+        </div>
+
+    </div>
+</script>
+<script type="text/x-kendo-template" id="androidcontent">
+
+    #var catimg = 'bu'; if(typeof(catid)!='undefined'){catimg=catid};#
+    <div id="a2handroid" class="a2h">
+        <div style="background-color: \#fff;">
+            <img id="android-img-cat" height="195" src="https://igstatic.azureedge.net/public/a2h/#=catimg#.jpg"  />
+            
+        </div>
+        <div style="height:75px">
+            #if (icon){#
+            <img class="android-icon" src="https://igappblobs.azureedge.net/users/2097917/2363698/Icon-144x144.png?v=#=ver#" onerror="A2HimhError(this)" />
+            #} else {#
+            <img class="android-icon" src="https://igstatic.azureedge.net/users/mobile/site/Icon-144x144.png?v=#=ver#" />
+            #}#
+
+            <img src="https://igstatic.azureedge.net/public/a2h/icon.png" style="float:right;margin:20px" width="17"/>
+            <div class="android-header">
+                <h2 style="color:\#3a3a3a">#=name#</h2>
+                <p style="color:\#919191">#=by#</p>
+            </div>
+          </div>
+        <div style="clear:both;"></div>
+        <div class="android-description-head" style="height:50px;text-align:center">
+            <a id="install-android" data-role="button" style="float:right;background-color:\#689f38;margin: 0px 10px 10px 10px; color: \#fff;" data-localize="android.install">Install</a>
+            <a id="open-chrome" data-rel="external" src="intent://#=window.location.hostname + window.location.pathname#\#Intent;scheme=http;package=com.android.chrome;end" data-role="button" style="float:right;background-color:\#689f38;margin: 0px 10px 10px 10px; color: \#fff;" data-localize="android.openchrome">Open in Chrome</a>
+        </div>
+        <div style="clear:both;"></div>
+      <hr style="color:\#919191;margin:10px" />
+       
+        <div class="android-footer" style="text-align:center; height:80px">
+
+            <img src="https://igstatic.azureedge.net/public/a2h/badges1.png" />
+            <img src="https://igstatic.azureedge.net/public/a2h/badges2.png" />
+            <img src="https://igstatic.azureedge.net/public/a2h/badges3.png" />
+            <img src="https://igstatic.azureedge.net/public/a2h/badges4.png" />           
+            
+        </div>
+        <hr style="color:\#919191;margin:10px" />
+        <div class="android-description">
+            
+            <p style="color:\#7a7a7a">#=desc#</p>
+        </div>
+
+     
+
+       
+    </div>
+</script>
+<script type="text/x-kendo-template" id="wpcontent">
+    <div id="a2hwp" class="a2h black">
+
+        <div style="width:100%;position:relative;margin-left:auto;margin-right:auto;text-align:center;background-color:\#000">
+            #if (icon){#
+
+                <img style="width: 100%; margin: 0px; padding: 0px; margin-bottom: 10px;border:none" src="https://igappblobs.azureedge.net/users/2097917/2363698/apple-touch-icon-precomposed.png?v=#=ver#" onerror="A2HimhErrorPre(this)" />
+            #} else {#
+                <img style="width: 100%; margin:0px;padding:0px;margin-bottom:10px; border: none" src="http://igenappsfiles.azureedge.net/users/sample/igenappsdemo/apple-touch-icon-precomposed.png?v=#=ver#" />
+            #}#
+
+        </div>
+
+        <div id="wppinit">
+
+            <img src="//az611828.vo.msecnd.net/public/templatedata/images/wppinit-updated.png" />
+
+        </div>
+
+    </div>
+</script>
+
+
+    <script>
+        if (window.location.href.indexOf("#index") > -1) {
+            window.location.hash = 0;
+            indexload = true;
+            var iconwidth = screen.width * 0.33;
+            var icontop =(( screen.height / 2 ) - (iconwidth/2)) - 40
+            document.getElementById("splash-icon").style.top = icontop + "px";
+            document.getElementById("splash-screen").style.display = "block";
+        }
+        function getURLParameter(name) {
+            return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || "kendo";
+        }
+    </script>
+    
+
+ <script> var adclient = null; var adslot = null; </script><div data-id="iGenAppsA2H" data-role="layout"></div><div data-id="iGenApps" data-role="layout" data-show="triggerIndexButton" data-init="triggerInit" data-hide="triggerHide"><header data-role="header"><div data-role="navbar" class="usercolor"><a id="drawer-button" data-align="left" data-role="button" href="#app-drawer" data-rel="drawer"><span class="km-icon km-igfont" data-val=""></span><span class="km-text" style="border-right:none"></span></a><a id="back-button" data-align="left" data-role="backbutton" data-transition="slide:right">Back</a><span data-role="view-title"></span><a id="open-url-button" data-align="right" data-role="button" data-rel="external" href="" target="_blank" data-click="OpenExternal" style="display:none"><span class="km-icon km-igfont" data-val=""></span><span class="km-text" style="border-right:none"></span></a><a id="share-drawer-button" data-align="right" data-role="button" href="#share-drawer" data-rel="drawer" data-views="['About']"><span class="icon icon-share-compact"></span><span class="km-text" style="border-right:none"></span></a></div><div id="viewloader" class="viewloading user-color-background"><div class="viewloader"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div></header></div><style type="text/css"> .km-content.background { background:center no-repeat url(https://igappblobs.azureedge.net/users/2097917/2363698/trans_background.png?v=13); background-size: cover; } </style><link rel="icon" type="image/png" href="https://igappblobs.azureedge.net/users/2097917/2363698/Icon-72x72.png?v=12"><link rel="apple-touch-icon" href="https://igappblobs.azureedge.net/users/2097917/2363698/apple-touch-icon-precomposed.png?v=12" /><div data-role="drawer" id="share-drawer" data-stretch="false" data-position="right" data-init="ShareDrawerInit" data-swipe-to-open="false"><p><a href="#About" data-transition="none"><span style="font-size:1.7em;margin-bottom:5px;" class="icon km-icon km-kfont icon-center" data-val=""></span></a><div id="share-links"></div></p></div><div data-role="drawer" id="app-drawer" data-stretch="true" data-position="left" data-swipe-to-open="false" data-use-native-scrolling="true"><ul data-role="listview"><li><a href="#0" data-transition="none" data-id="0"><span class="icon km-icon km-iggeneral" data-val=""></span><span class="text"> Maps</span></a></li><li><a target="_blank" data-rel="external" onclick='window.location="https://tebahpla.github.io/oogleformobile"' data-transition="none" target="_blank"><span class="icon km-icon km-iggeneral" data-val=""></span><span class="text">Search</span></a></li><li><a target="_blank" data-rel="external" onclick='window.location="https://tebahpla.github.io/mobile/translate";' data-transition="none" target="_blank"><span class="icon km-icon km-igbusiness" data-val="&#128208;"></span><span class="text">Translate</span></a></li><li><a onclick='window.location="https://tebahpla.github.io/mobile/chat"' data-transition="none" target="_blank"><span class="icon km-icon km-igbusiness" data-val="&#128425;"></span><span class="text">Chat</span></a></li><li><a onclick='window.location="https://tebahpla.github.io/mobile/calc"' data-transition="none" target="_blank"><span class="icon km-icon km-igbusiness" data-val="&#128425;"></span><span class="text">Calculator</span></a></li><li><a href="ggt" data-transition="none" ><span class="icon km-icon km-iggeneral" data-val=""></span><span class="text">Beerie GPS Voice</span></a></li><li><a onclick='window.location="https://vincens2005.github.io/t-rex-runner/"' data-transition="none" target="_blank"><span class="icon km-icon km-igbusiness" data-val="&#128425;"></span><span class="text">Dinosaur Game</span></a></li><li><a href="#1" data-transition="none" data-id="1"><span class="icon km-icon km-iggeneral2" data-val="&#128070;"></span><span class="text">Support </span></a></li><li><a target="_blank" data-rel="external" href="https://www.surveymonkey.com/r/H2VHZ6Q" data-transition="none" target="_blank"><span class="icon km-icon km-igbusiness" data-val="&#128203;"></span><span class="text">Feedback </span></a></li><li><form action='https://tebahpla.github.io/oogleformobile' ><br><input type="search" title="Search the Web" autofocus class='speech-input' placeholder="Search the Web" name="q" autocomplete="on"  value required><br></form></li><li><div style="width: 245px;"><iframe style="display: block;" src="https://cdnres.willyweather.com/widget/loadView.html?id=76097" frameborder="0" scrolling="no"></iframe></div></li></ul></div><div data-role="view" id="0" data-title=" Maps" data-init="buildMap" id="map" data-show="No" data-hide="No" data-before-show="No" data-before-hide="No" data-layout="iGenApps" data-compiled="false" data-zoom="false" data-stretch="false" data-result="{&quot;lon&quot;:-122.33761310577,&quot;lat&quot;:47.678839379551,&quot;zoomLevel&quot;:15}" data-search="false" data-use-native-scrolling="true" data-template="map_location"><div data-role="content"><div id="single_map0" class="map-single" data-stretch="true" style="width:100%;"></div></div></div><div data-role="view" id="1" data-title="Support" data-init="loadTextblockSquare" data-show="No" data-hide="No" data-before-show="No" data-before-hide="No" data-layout="iGenApps" data-compiled="false" data-zoom="false" data-stretch="false" data-result="{&quot;title&quot;:&quot;Support &quot;,&quot;description&quot;:&quot;&#128405;&#128405;&#128405;&#128405;&#128405;\nYOU WOULD GET IT IF YOU WENT TO BILLINGS!!!!!\n&quot;}" data-search="false" data-use-native-scrolling="true" data-template="other_contentblock1"><div id="con1" data-role="content" class="content-textblock"><div class="km-group-title" style="display: none;"></div><h3 id="htext1" style="margin-top: 20px;"></h3><div id="text1" class="textblock-square"><p id="ptext1"></p></div></div></div><div data-role="view" data-title="&nbsp;" id="About" data-show="CheckDrawer" data-hide="ShowDrawer" data-layout="iGenApps" data-compiled="false"><div data-role="content"><div id="icon-image"></div><div id="icon-container"><img id="app-icon" src="https://igappblobs.azureedge.net/users/2097917/2363698/apple-touch-icon-precomposed.png?v=12" onerror="SetAboutImage(this)" /><div class="appinfo"><h4 class="appname">Oogle </h4><p> Oogle, inc<br /><strong>12</strong></p></div></div><div id="logo-image"></div></div><style scoped> #About #icon-container{ text-align:center; } #About #app-icon { width:200px; height: 200px; position: relative; top:-100px; -webkit-border-radius: 12px; border-radius: 12px; } #About .appinfo{ margin-top:-85px; text-align:center; } #About .appinfo p{ color:#FF0E19; } #About #icon-image { text-align: center; font-size: 1.5em; font-weight: bold; background-color: #FF0E19; height:225px; } #About #logo-image img { width: 200px; height: 60px; position:relative; bottom:0px; text-align: center; margin-left:auto; margin-right:auto; } #About #logo-image { position:relative; background-color: #FF0E19; width: 200px; height: 54px; -webkit-mask-image: url('https://igstatic.azureedge.net/public/website/logoblacktrans200.png'); margin-left:auto; margin-right:auto; margin-top:10%; } #About .appname { margin: 5px; color:#2d2d2d; font-size:2em; background-color:transparent ; padding-bottom: 5px; } @media only screen and (min-device-width: 375px) { #About #logo-image { margin-top:30%; } } @media only screen and (min-device-width: 414px) { #About #logo-image { margin-top:40%; } } </style><script> function CheckDrawer(e) { var drawercheck = $("#app-drawer").attr("id"); if (drawercheck == undefined) { e.view.header.find("#share-drawer-button").css({ display: "none" }); $("#share-drawer").data("kendoMobileDrawer").hide(); } } function ShowDrawer(e) { var drawercheck = $("#app-drawer").attr("id"); if (drawercheck == undefined) { e.view.header.find("#share-drawer-button").css({ display: "" }); } } function SetAboutImage(img) { img.onerror = ""; img.src = "https://igstatic.azureedge.net/users/mobile/site/apple-touch-icon-precomposed.png"; return true; } </script></div><div data-role="view" data-title="www" id="iframext" data-init="InitiFrame" data-show="LoadUrliFrameDirect" data-hide="HideIframe" data-layout="iGenApps" data-compiled="false" data-stretch="false" data-zoom="false" data-use-native-scrolling="false"><div data-role="content" id="iframext-content" style="overflow:auto!important;-webkit-overflow-scrolling: touch;"></div></div><script type="text/javascript"> var userAppGuid="56728446-c26a-4c3d-931f-8563528a291d",UseUpdatedLayout=!0,osPlatform=decodeURIComponent((new RegExp("[?|&]platform=([^&;]+?)(&|#|;|$)").exec(location.search)||[,""])[1].replace(/\+/g,"%20"))||"kendo",notificationActive=!1,a2hActive=!1,appName="users/2097917/oogle",appDisplayName="Oogle ",iconName="Oogle ",appTitle="Oogle ",menuType="left_panel",userAppVersion="12",userColor="#FF0E19",appURL="https://app.igenapps.com/2363698",hasSplash=!1,fontsNeeded=["general","","business","general2"],appLanuage="English",dataSeparated=!0,appId=2363698,iGenApp=[{name:appDisplayName,by:"Oogle, inc",desc:"The Oogle app that we&#39;ve all been waiting for! You can search, translate, view a map, and use a calculator! Get it now!",cat:"Entertainment",catid:"en",created:"Jun 19, 2017 ",ver:userAppVersion,uapp:appName,icon:!0,blob:!0}] </script><div data-role="modalview" id="NotifyView" style="width: 200px; height: 150px"><h4 id="nmessage"></h4><a data-role="button" class="modalview-button" data-click="closeModal">Close</a></div><style type="text/css" data-date-published="6/19/2017 3:23:53 AM"> .textblock-square{margin-left:0;margin-right:0;background-color:#fff;font-size:.92em;color:#555}.textblock-square p{padding:13px 10px;margin-left:5px;margin-right:5px;overflow-wrap:break-word;word-wrap:break-word;word-break:break-word}.content-textblock h3{color:#5b5b5b;font-weight:400;font-size:16px;margin-bottom:-8px}.content-textblock{} </style>
+Hi This is a placeholder for Maps since it broke
+<script>
+   
+    var lat =47.681;
+    var long = -122.336;
+    navigator.geolocation.getCurrentPosition(function(position) {
+  lat = position.coords.latitude;
+  long =position.coords.longitude ;
+});
+console.log(lat +" mm "+long);
+window.setTimeout(mapsetup,1000);
+     var emoji = 'https://tebahpla.github.io/poop.png';
+     mapboxgl.accessToken = 'pk.eyJ1IjoiY3VrbWVrZXJiIiwiYSI6ImNqa29mNGJwZDB3MXUzcG96dGtyZmp1a2UifQ.GvfU9gMB-KwbvNcNWubN_w';
+function mapsetup(){
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/cukmekerb/cjkoj2ug706hq2smwlk77suve',
+center: [long, lat], // starting position
+zoom:14,
+});
+map.addControl(new mapboxgl.NavigationControl());
+map.addControl(new mapboxgl.FullscreenControl());
+map.on('load', function() {
+
+    map.loadImage('https://tebahpla.github.io/poop.png', function(error, image) {
+        if (error) throw error;
+        map.addImage('cat', image);
+        map.addLayer({
+            "id": "points",
+            "type": "symbol",
+            "source": {
+                "type": "geojson",
+                "data": {
+                    "type": "FeatureCollection",
+                    "features": [{
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [long, lat]
+                        }
+                    }]
+                }
+            },
+            "layout": {
+                "icon-image": "cat",
+                "icon-size": 0.8
+            }
+        });
+        
+    });
+});
+};
+    </script>
+    <script type="text/javascript" src="https://igserviceaka.azureedge.net/bundle/require.min.js?v=5ba276af-711f-40db-8510-f27d90524182"></script>
+    <script type="text/javascript">
+        var secure =  false;
+
+        require.config({
+            skipDataMain: true,
+            enforceDefine: false,
+            waitSeconds : 0,
+            paths: {
+                'jquery': 'https://kendo.cdn.telerik.com/2017.1.118/js/jquery.min',
+                'kendo.mobile.min':'https://kendo.cdn.telerik.com/2017.1.118/js/kendo.mobile.min',
+                'igenappjsa2hmaterial':'https://igserviceaka.azureedge.net/bundle/igscript4.0.min.js?v=5ba276af-711f-40db-8510-f27d90524182',
+            },
+            shim:{
+                'igenappjsa2hmaterial': {
+                    deps: ['jquery','kendo.mobile.min']
+                }
+            }
+        });
+        var Fontbase = 'https://use.fortawesome.com/';
+        require([Fontbase + '06e699e1.js']);
+        if(typeof(fontsNeeded) != "undefined"){
+            var FontPaths = [{f:"business",u:"7fae2a24"},{f:"food",u:"f9636f27"},{f:"fun",u:"24b2ce2b"},{f:"health-fitness",u:"ededacae"},{f:"home",u:"740190b0"},{f:"location-weather",u:"ae01d74c"},{f:"media",u:"9e7ed6fd"},{f:"misc",u:"3739adb5"},{f:"transportation",u:"e17b0989"},{f:"general",u:"f28fdff0"},{f:"general2",u:"f28fdff0"}];
+            for(i = 0; i < FontPaths.length; i++) {
+                if(fontsNeeded.indexOf(FontPaths[i].f) > -1){
+                    require([Fontbase + FontPaths[i].u +'.js']);
+                }
+            }
+        }else{
+            require([Fontbase +'4fd18528.js']);
+        }
+        require([ "jquery", "kendo.mobile.min" ], function($, kendo) {
+            console.log(kendo)
+            if(!secure){
+                if (!kendo.support.mobileOS && window.location.href.indexOf("#0") == -1 && window.location.href.indexOf("nopcview") == -1) {
+                    var DefaultUrl = '';
+                    console.log('PC');
+                    if (DefaultUrl.length > 0) {
+                        
+                    } else {
+                        
+                    }
+                }
+            }
+            console.log('no PC');
+            require(['igenappjsa2hmaterial'],function(igenappjsa2hmaterial){
+                if (kendo.support.mobileOS) {
+                    if (kendo.support.mobileOS.android) {
+                        if(localStor){
+                            console.log(localStorage['ServerCached2363698']);
+                            if(localStorage.getItem('ServerCached2363698') == undefined){
+                                setTimeout(function(){
+                                    console.log('trigger servicejob install');
+                                    $('body').append('<iframe src="/App/Offline?UserAppGuid='+ userAppGuid +'&UserColor=%23FF0E19&Query=" style="display:none"/>');
+                                },3000);
+                                localStorage.setItem("ServerCached2363698", "true");
+                            }
+                        }
+                    }
+                    var phid = getURLParameter("native");
+                    var push = "";
+                    if(phid == "kendo"){
+                        phid = getURLParameter("nativepush");
+                        if(phid >0){
+                            push="push";
+                        }
+                    }
+                    if(phid > 0){
+                        console.log('Phonegap' + phid);
+                        if (kendo.support.mobileOS.ios) {
+                            console.log('ph ios')
+                            require(['https://igserviceaka.azureedge.net/bundles/igeniospg'+ push + phid],function(){
+                                require(['https://igappfiles.azureedge.net/public/ipa/events'+ phid +'.js']);
+                                if(push){
+                                    console.log('push enabled')
+                                    require(['https://igappfiles.azureedge.net/public/push/2363698.js?v=12'])
+                                }
+                            });
+                        }
+                        if (kendo.support.mobileOS.android) {
+                            console.log('ph android')
+                            require(['https://igserviceaka.azureedge.net/bundles/igenandroidpg'+ push + phid],function(){
+                                require(['https://igappfiles.azureedge.net/public/apk/events'+ phid +'.js']);
+                                if(push){
+                                    console.log('push enabled')
+                                    require(['https://igappfiles.azureedge.net/public/push/2363698.js?v=12'])
+                                }
+                            });
+                        }
+                    }
+                    LogAppViewID('2363698', 'https://app.igenapps.com/2363698');
+                    (function (i, s, o, g, r, a, m) {
+                        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+                    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                    ga('create', 'UA-15270735-1', 'auto');
+                    ga('send', 'pageview');
+                }
+            });
+        });
+    </script> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58f14f9d42d58017"></script>
+</body>
+  
+  
+</html>
