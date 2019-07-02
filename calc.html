@@ -1,4 +1,4 @@
-<head><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<head><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
     google_ad_client: "ca-pub-3362264853061823",
@@ -107,20 +107,9 @@ function signOut() {
 
 
 <script>
-function loadXMLDoc() {
-	var whut;
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-	    whut = this.responseText.replace('<a href="https://tebahpla.github.io/calc">Calculator</a>','<a href="https://ooogle.github.io/beta/">Search</a>');
-      document.getElementById("links").innerHTML =
-      whut;
-	 
-    }
-  };
-  xhttp.open("GET", "menulinks.txt", true);
-  xhttp.send();
-}
+$.get('https://ooogle.github.io/beta/menulinks.txt', function(a){
+document.getElementById('links').innerHTML=a.replace('<a href="calc">Calculator</a>','<a href="https://tebahpla.github.io/newerhome">Search</a>');
+});
 </script>
 
 </body>
