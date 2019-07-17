@@ -1,0 +1,21 @@
+
+  <script src='https://cdn.pubnub.com/pubnub-3.7.13.min.js'></script>
+<script>
+var w;
+
+
+  
+    if(typeof(w) == "undefined") {
+      w = new Worker("file:///Users/Cukmekerb/Desktop/wercher.js");
+    }
+    w.onmessage = function(event) {
+      document.getElementById("result").innerHTML = event.data;
+
+  } 
+
+
+function stopWorker() { 
+  w.terminate();
+  w = undefined;
+}
+</script>
