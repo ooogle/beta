@@ -7,7 +7,7 @@
   var n = new Notification(theTitle,options);
   setTimeout(n.close.bind(n), 5000); 
 }
-Notification.requestPermission()
+
 
   	
     var channel = 'simple-chat';
