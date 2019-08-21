@@ -81,6 +81,12 @@ document.getElementById('links').innerHTML=a.replace('<a href="translate">Transl
 }
 </script>
 
+<select  id="lang">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
    <form id='myForm'>
 <textarea oninput="translater()" id="text"></textarea></form><button onclick="translate()">TRANSLATE</button><h2 id="translator" onclick="copyToClipboard('#translator')" title="Click to copy the text"></h2><br>
  Powered by <a href="https://translate.yandex.com/" target="_blank">Yandex.Translate</a>
