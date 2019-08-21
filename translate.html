@@ -81,11 +81,17 @@ document.getElementById('links').innerHTML=a.replace('<a href="translate">Transl
 }
 </script>
 
-<select  id="lang">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
+<select  id="lang1">
+  <option value="en">English</option>
+  <option value="es">Spanish</option>
+  <option value="ru">Russian</option>
+  <option value="af">Afrikaans</option>
+    <option value="am">Amharic</option>
+      <option value="ar">Arabic</option>
+        <option value="az">Azerbaijani</option>
+          <option value="ba">Bashkir</option>
+            <option value="be">Belarusian</option>
+    <option value="bg">Bulgarian</option>
 </select>
    <form id='myForm'>
 <textarea oninput="translater()" id="text"></textarea></form><button onclick="translate()">TRANSLATE</button><h2 id="translator" onclick="copyToClipboard('#translator')" title="Click to copy the text"></h2><br>
