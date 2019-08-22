@@ -75,8 +75,12 @@ document.getElementById('translator').innerHTML=text;
 }
 
 function translate(){
-$.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20190821T231506Z.0ce703d4a746efde.5dcbab81dac6133800dc76f34b8241526fc369a7&text=i%20like%20pooping&lang=en-es', function(a){
-document.getElementById('links').innerHTML=a.replace('<a href="translate">Translate</a>','<a href="https://tebahpla.github.io/newerhome">Search</a>');
+var start = document.getElementById("lang1").value;
+var end = document.getElementById("lang2").value;
+var text = document.getElementById("text").value;
+$.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20190821T231506Z.0ce703d4a746efde.5dcbab81dac6133800dc76f34b8241526fc369a7&text='text'&lang='+start+'-'+end, function(a){
+
+
 });
 }
 </script>
