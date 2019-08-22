@@ -13,7 +13,7 @@
 <html itemscope="" itemtype="http://schema.org/WebPage" lang="en-CA"><head><section><a href="translate.html"><meta content="https://github.com/tebahpla/tebahpla.github.io/blob/master/oogletranslate.png?raw=true" itemprop="image">
 <img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/oogletranslate.png?raw=true" class="floatin_oogle">
   </a><np id="greeting" translate="no"></np></section><br>
-  <script>
+   <script>
 function setCookie(cname,cvalue,exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -66,6 +66,7 @@ var x = document.getElementById("myForm");
 document.getElementById('translator').innerHTML=text;
 
 }
+
  function copyToClipboard(element) {
   var $temp = $("<input>");
   $("body").append($temp);
@@ -78,9 +79,9 @@ function translate(){
 var start = document.getElementById("lang1").value;
 var end = document.getElementById("lang2").value;
 var text = document.getElementById("text").value;
-$.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20190821T231506Z.0ce703d4a746efde.5dcbab81dac6133800dc76f34b8241526fc369a7&text='text'&lang='+start+'-'+end, function(a){
-
+$.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20190821T231506Z.0ce703d4a746efde.5dcbab81dac6133800dc76f34b8241526fc369a7&text='+text+'&lang='+start+'-'+end, function(a){
 //poop
+
 });
 }
 </script>
@@ -297,4 +298,5 @@ Translate From: <select  id="lang1">
 $.get('https://ooogle.github.io/beta/menulinks.txt', function(a){
 document.getElementById('links').innerHTML=a.replace('<a href="translate">Translate</a>','<a href="https://tebahpla.github.io/newerhome">Search</a>');
 });
+
 </script>
