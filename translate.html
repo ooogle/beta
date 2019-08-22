@@ -81,7 +81,7 @@ document.getElementById('links').innerHTML=a.replace('<a href="translate">Transl
 }
 </script>
 
-<select  id="lang1">
+Translate From: <select  id="lang1">
   <option value="en">English</option>
   <option value="es">Spanish</option>
   <option value="ru">Russian</option>
@@ -177,7 +177,104 @@ document.getElementById('links').innerHTML=a.replace('<a href="translate">Transl
 <option value="zh">Chinese</option>
 </select>
    <form id='myForm'>
-<textarea oninput="translater()" id="text"></textarea></form><button onclick="translate()">TRANSLATE</button><h2 id="translator" onclick="copyToClipboard('#translator')" title="Click to copy the text"></h2><br>
+<textarea oninput="translater()" id="text"></textarea></form><button onclick="translate()">TRANSLATE</button>
+<br>Translate to: <select  id="lang2">
+
+  <option value="es">Spanish</option>
+  <option value="ru">Russian</option>
+    <option value="en">English</option>
+  <option value="af">Afrikaans</option>
+    <option value="am">Amharic</option>
+      <option value="ar">Arabic</option>
+        <option value="az">Azerbaijani</option>
+          <option value="ba">Bashkir</option>
+            <option value="be">Belarusian</option>
+    <option value="bg">Bulgarian</option>
+<option value="bn">Bengali</option>
+<option value="bs">Bosnian</option>
+<option value="ca">Catalan</option>
+<option value="cbe">Cebuano</option>
+<option value="cs">Czech</option>
+<option value="cy">Welsh</option>
+<option value="da">Danish</option>
+<option value="de">German</option>
+<option value="el">Greek</option>
+<option value="eo">Esperanto</option>
+<option value="et">Estonian</option>
+<option value="eu">Basque</option>
+<option value="fa">Persian</option>
+<option value="fi">Finnish</option>
+<option value="fr">French</option>
+<option value="ga">Irish</option>
+<option value="gd">Scottish Gaelic</option>
+<option value="gl">Galician</option>
+<option value="gu">Guharati</option>
+<option value="he">Hebrew</option>
+<option value="hi">Hindi</option>
+<option value="hr">Croatian</option>
+<option value="ht">Haitian</option>
+<option value="hu">Hungarian</option>
+<option value="hy">Armenian</option>
+<option value="id">Indonesian</option>
+<option value="is">Icelandic</option>
+<option value="it">Italian</option>
+<option value="ja">Japanese</option>
+<option value="jv">Javanese</option>
+<option value="ka">Georgian</option>
+<option value="kk">Kazakh</option>
+<option value="km">Kmer</option>
+<option value="kn">Kannada</option>
+<option value="ko">Korean</option>
+<option value="ky">Kyrgyz</option>
+<option value="la">Latin</option>
+<option value="lb">Luxembourgish</option>
+<option value="lo">Lao</option>
+<option value="lt">Lithuanian</option>
+<option value="lv">Latvian</option>
+<option value="mg">Malagasy</option>
+<option value="mhr">Mari</option>
+<option value="mi">Maori</option>
+<option value="mk">Macedonian</option>
+<option value="ml">Malayalam</option>
+<option value="ml">Mongolian</option>
+<option value="mr">Marathi</option>
+<option value="mrj">Hill Mary</option>
+<option value="ms">Malay</option>
+<option value="mt">Maltese</option>
+<option value="my">Burmese</option>
+<option value="ne">Nepali</option>
+<option value="nl">Dutch</option>
+<option value="no">Norweigian</option>
+<option value="pa">Punjabi</option>
+<option value="pap">Papiamento</option>
+<option value="pl">Polish</option>
+<option value="pt">Portugese</option>
+<option value="ro">Romanian</option>
+<option value="si">Sinhalese</option>
+<option value="sk">Slovak</option>
+<option value="sl">Slovenian</option>
+<option value="sq">Albanian</option>
+<option value="sr">Serbian</option>
+<option value="su">Sudanese</option>
+<option value="sv">Swedish</option>
+<option value="sw">Swahili</option>
+<option value="ta">Tamil</option>
+<option value="te">Telugu</option>
+<option value="tg">Tajik</option>
+<option value="th">Thai</option>
+<option value="tl">Tagalog</option>
+<option value="tr">Turkish</option>
+<option value="tt">Tatar</option>
+<option value="udm">Udmurt</option>
+<option value="uk">Ukrainian</option>
+<option value="ur">Urdu</option>
+<option value="uz">Uzbek</option>
+<option value="vi">Vietnamese</option>
+<option value="xh">Xhosa</option>
+<option value="yi">Yiddish</option>
+<option value="zh">Chinese</option>
+</select>
+<h2 id="translator" onclick="copyToClipboard('#translator')" title="Click to copy the text"></h2><br>
  Powered by <a href="https://translate.yandex.com/" target="_blank">Yandex.Translate</a>
                        
 
